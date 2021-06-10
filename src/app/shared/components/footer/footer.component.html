@@ -1,0 +1,33 @@
+<section class="container text-white">
+    <div class="flex justify-between mb-24">
+        <div class="w-7/12">
+            <div class="logo">
+                <img src="assets/images/logo-santo-job-white.png" class="w-5/12" alt="Logo Santo Job Branco">
+            </div>
+            <div class="contact-info">
+                <h3 class="futura-book-bold contact-title">Contato</h3>
+                <p class="contact-item flex mb-5"><span class="contact-icon"><img src="assets/images/icons/icon-phone.png" alt="icone-telefone" class="w-8"></span><span class="ml-6 text-xl">+55 11 3535.0000</span></p>
+                <p class="contact-item flex mb-5"><span class="contact-icon"><img src="assets/images/icons/icon-email.png" alt="icone-email" class="w-8"></span><span class="ml-6 text-xl">contato@santojobcomunicacao.com</span></p>
+                <p class="contact-item flex mb-5"><span class="contact-icon"><img src="assets/images/icons/icon-instagram.png" alt="icone-instagram" class="w-8"></span><span class="ml-6 text-xl">@SantoJobComunicacao</span></p>
+            </div>
+            <div class="address-info">
+                <img src="assets/images/icons/icon-location.png" alt="icone-lugar" class="w-10 mb-5">
+                <p class="text-xl w-80">Avenida Paulista 171, 10º andar Bela Vista, São Paulo - SP CEP 01311-904</p>
+            </div>
+        </div>
+        <div class="contact-form w-5/12">
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form grid grid-cols-1 bg-white">
+                <h2 class="text-black futura-book-bold text-4xl form-title">Fale conosco</h2>
+                <input id="nome" type="text" placeholder="Nome" formControlName="nome" class="input-control input">
+                <div class="grid grid-cols-2 gap-5">
+                    <input id="telefone" type="tel" placeholder="Telefone" formControlName="telefone" class="input-control input">
+                    <input id="email" type="email" placeholder="E-mail" formControlName="email" class="input-control input">
+                </div>
+                <input id="assunto" type="text" placeholder="Assunto" formControlName="assunto" class="input-control input">
+                <textarea rows="5" id="mensagem" type="text" placeholder="Mensagem" formControlName="mensagem" class="input-control"></textarea>
+                <button type="submit" class="form-button" [disabled]="!contactForm.valid">ENVIAR</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-text text-center futura-book-bold">© 2020 Santo Job. Todos os direitos reservados.</div>
+</section>

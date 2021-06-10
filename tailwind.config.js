@@ -6,6 +6,7 @@ module.exports = {
     prefix: '',
     mode: 'jit',
     purge: {
+      enabled: false,
       content: [
         './src/**/*.{html,ts,css,scss,sass,less,styl}',
       ]
@@ -13,6 +14,9 @@ module.exports = {
     darkMode: false, // or 'media' or 'class'
     theme: {
       extend: {},
+      container: {
+        center: true,
+      },
     },
     variants: {
       extend: {},

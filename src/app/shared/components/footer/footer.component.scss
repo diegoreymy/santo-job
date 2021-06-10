@@ -1,0 +1,74 @@
+@import "/src/app/shared/styles/variables";
+
+:host {
+  background-color: $primaryblue;
+  padding: 96px 0 86px;
+}
+
+.logo {
+    margin-bottom: 57px;
+}
+
+.contact-info {
+    .contact-title {
+        font-size: 44px;
+        margin-bottom: 2rem;
+    }
+}
+
+.contact-form {
+  .form {
+    position: relative;
+    padding: 32px 55px;
+    border-radius: 83px;
+    .form-title {
+      margin-bottom: 1.5rem;
+      margin-left: 45px;
+    }
+
+    .input-control {
+      border: 1px solid #231F20;
+      border-radius: 36px;
+      margin-bottom: 1.5rem;
+      color: $primaryText;
+      padding: 2rem 1rem;
+      &.input {
+          height: 71px;
+      }
+    }
+
+    .form-button {
+      border-radius: 36px;
+      background-color: $yellow;
+      width: 321px;
+      height: 71px;
+      position: absolute;
+      bottom: -35px;
+      left: calc(50% - 160px);
+    }
+  }
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  text-align: left;
+  letter-spacing: 0px;
+  color: #231F20;
+  opacity: 0.35;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  text-align: left;
+  letter-spacing: 0px;
+  color: #231F20;
+  opacity: 0.35;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  text-align: left;
+  letter-spacing: 0px;
+  color: #231F20;
+  opacity: 0.35;
+}
