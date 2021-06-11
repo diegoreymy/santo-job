@@ -1,7 +1,7 @@
 @import "/src/app/shared/styles/variables";
 
 :host {
-  background-color: $primaryblue;
+  background-color: $primaryBlueColor;
   padding: 37px 0 72px;
   @media (min-width: $lg) {
     padding: 96px 0 86px;
@@ -16,12 +16,12 @@
 
     @media (min-width: $lg) {
       border-radius: 83px;
-      padding: 32px 55px;
+      padding: 32px 40px;
     }
 
     .input-control {
       border: 1px solid #231F20;
-      color: $primaryText;
+      color: $primaryBlackColor;
     }
 
     .form-button {

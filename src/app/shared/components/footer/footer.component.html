@@ -1,4 +1,4 @@
-<section class="container px-4 text-white">
+<section class="container text-white">
     <div class="flex flex-wrap lg:flex-nowrap justify-center lg:justify-between lg:mb-24 lg:flex-row-reverse">
         <h2 class="text-white futura-book-bold text-4xl mb-11 lg:hidden">Fale conosco</h2>
         <div class="contact-form w-full lg:w-5/12 mb-14 lg:mb-0">
@@ -8,14 +8,14 @@
                     class="input-control input lg:h-16 lg:px-8 mb-3 lg:mb-6 rounded-2xl lg:rounded-3xl">
                 <div class="grid grid-cols-2 gap-5">
                     <input id="telefone" type="tel" placeholder="Telefone" formControlName="telefone"
-                        class="input-control input lg:h-16 mb-3 lg:mb-6 rounded-2xl lg:rounded-3xl">
+                        class="input-control input lg:h-16 lg:px-8 mb-3 lg:mb-6 rounded-2xl lg:rounded-3xl">
                     <input id="email" type="email" placeholder="E-mail" formControlName="email"
-                        class="input-control input lg:h-16 mb-3 lg:mb-6 rounded-2xl lg:rounded-3xl">
+                        class="input-control input lg:h-16 lg:px-8 mb-3 lg:mb-6 rounded-2xl lg:rounded-3xl">
                 </div>
                 <input id="assunto" type="text" placeholder="Assunto" formControlName="assunto"
-                    class="input-control input lg:h-16 mb-3 lg:mb-6 rounded-2xl lg:rounded-3xl">
+                    class="input-control input lg:h-16 lg:px-8 mb-3 lg:mb-6 rounded-2xl lg:rounded-3xl">
                 <textarea rows="5" id="mensagem" type="text" placeholder="Mensagem" formControlName="mensagem"
-                    class="input-control rounded-2xl lg:rounded-3xl mb-12 lg:mb-24"></textarea>
+                    class="input-control rounded-2xl lg:px-8 lg:rounded-3xl mb-12 lg:mb-24"></textarea>
                 <button type="submit" class="form-button" [disabled]="!contactForm.valid">ENVIAR</button>
             </form>
         </div>

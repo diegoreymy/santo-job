@@ -1,0 +1,25 @@
+@import "/src/app/shared/styles/variables";
+
+:host {
+  background-color: $primaryYellowColor;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  height: 6rem;
+  @media (min-width: $md) {
+    background-color: #fff;
+  }
+  @media (min-width: $lg) {
+    height: 120px;
+  }
+}
+
+a:hover, a.selected {
+    color: $primaryBlackColor;
+}
+
+button.menu {
+    color: $primaryBlackColor;
+}
