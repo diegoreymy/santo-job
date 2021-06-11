@@ -16,8 +16,11 @@
   }
 }
 
-a:hover, a.selected {
-    color: $primaryBlackColor;
+li:hover, li.selected {
+    @media (min-width: $md) {
+        color: $primaryBlackColor;
+        cursor: pointer;
+    }
 }
 
 button.menu {

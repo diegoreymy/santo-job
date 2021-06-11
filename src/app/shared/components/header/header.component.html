@@ -21,22 +21,30 @@
                 </div>
                 <div class="flex-1 flex items-center justify-center md:items-stretch md:justify-start">
                     <div class="flex-shrink-0 flex items-center">
-                        <img class="block lg:hidden h-20 w-auto" src="assets/images/logo-santo-job-centralizado.png"
-                            alt="logo Santo Job">
-                        <img class="hidden lg:block w-52" src="assets/images/logo-santo-job-centralizado.png"
-                            alt="logo Santo Job">
+                        <a routerLink='/' routerLinkActive="router-link-active">
+                            <img class="block lg:hidden h-20 w-auto" src="assets/images/logo-santo-job-centralizado.png"
+                                alt="logo Santo Job">
+                        </a>
+                        <a routerLink='/' routerLinkActive="router-link-active">
+                            <img class="hidden lg:block w-52" src="assets/images/logo-santo-job-centralizado.png"
+                                alt="logo Santo Job">
+                        </a>
                     </div>
                     <div class="hidden md:flex items-center md:ml-6 w-full">
-                        <div class="flex space-x-4 w-full justify-around items-center">
-                            <a href="#" class="futura-book-bold color-disable text-base lg:text-lg xl:text-2xl selected"
-                                aria-current="page">Quem somos</a>
+                        <ul class="flex space-x-4 w-full justify-around items-center">
+                            <li href="#"
+                                class="futura-book-bold color-disable text-base lg:text-lg xl:text-2xl selected"
+                                aria-current="page">Quem somos</li>
 
-                            <a href="#" class="futura-book-bold color-disable text-base lg:text-lg xl:text-2xl">O que fazemos</a>
+                            <li href="#" class="futura-book-bold color-disable text-base lg:text-lg xl:text-2xl">O que
+                                fazemos</li>
 
-                            <a href="#" class="futura-book-bold color-disable text-base lg:text-lg xl:text-2xl">Influencers</a>
+                            <li href="#" class="futura-book-bold color-disable text-base lg:text-lg xl:text-2xl">
+                                Influencers</li>
 
-                            <a href="#" class="futura-book-bold color-disable text-base lg:text-lg xl:text-2xl">Fale conosco</a>
-                        </div>
+                            <li href="#" class="futura-book-bold color-disable text-base lg:text-lg xl:text-2xl">Fale
+                                conosco</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -45,16 +53,18 @@
 </section>
 <!-- Menu Mobile -->
 <div class="md:hidden absolute top-24 bg-black w-full" [hidden]="!open" id="mobile-menu">
-    <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-            aria-current="page">Quem somos</a>
-        <a href="#"
+    <ul class="px-2 pt-2 pb-3 space-y-1">
+        <li href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+            aria-current="page">Quem somos</li>
+        <li href="#"
             class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">O
-            que fazemos</a>
-        <a href="#"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Influencers</a>
-        <a href="#"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Fale
-            conosco</a>
-    </div>
+            que fazemos</li>
+        <li href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+            Influencers</li>
+        <li href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+            Fale
+            conosco</li>
+    </ul>
 </div>
