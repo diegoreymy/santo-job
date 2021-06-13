@@ -17,19 +17,21 @@
     align-items: center;
     flex-direction: column;
 
-    .logo-img {
-      width: 50%;
-      height: auto;
-
+    .title-img {
+      width: 70%;
+      @media (min-width: $lg) {
+        width: 50%;
+      }
     }
 
     .nuvems {
       position: absolute;
 
       &.nuvem-sm {
-        top: 45%;
+        top: 70%;
         left: 0;
         width: 70px;
+
         @media (min-width: $lg) {
           top: 45%;
           left: 5%;
@@ -38,9 +40,10 @@
       }
 
       &.nuvem-md {
-        top: 35%;
+        top: 60%;
         right: -10%;
         width: 100px;
+
         @media (min-width: $lg) {
           top: 35%;
           right: -10%;
@@ -52,6 +55,7 @@
         top: 25%;
         left: 10%;
         width: 100px;
+
         @media (min-width: $lg) {
           top: 25%;
           left: 10%;
@@ -67,6 +71,7 @@
       padding: .5rem 1rem;
       justify-content: space-around;
       width: 175px;
+
       @media (min-width: $lg) {
         width: 363px;
         padding: 1.25rem 4rem;
@@ -74,10 +79,142 @@
 
       .social-icon {
         height: 1rem;
+
         @media (min-width: $lg) {
           height: 2.5rem;
         }
       }
     }
+  }
+}
+
+.second-banner {
+  position: relative;
+  overflow: hidden;
+
+  .bg {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .logo-img {
+      width: 30%;
+      height: auto;
+      position: absolute;
+      top: 2.5rem;
+      right: 35%;
+
+      @media (min-width: $lg) {
+        width: 20%;
+        height: auto;
+        position: absolute;
+        top: 2.5rem;
+        right: 2.5rem;
+      }
+    }
+
+    .title-box {
+      display: flex;
+      flex-direction: column;
+
+      .first-title-text {
+        font-family: 'Futura Bk BT';
+        font-size: 2rem;
+        margin-left: 1.5rem;
+
+        @media (min-width: $lg) {
+          font-size: 6rem;
+          margin-left: 4rem;
+        }
+
+      }
+
+      .second-title-group {
+        display: flex;
+        position: relative;
+
+        .second-title-text {
+          font-family: 'Futura Book';
+          font-size: 2.5rem;
+          margin-left: 1.5rem;
+
+          @media (min-width: $lg) {
+            font-size: 8.5rem;
+            margin-left: 4rem;
+          }
+        }
+
+        .images-group {
+          display: flex;
+          position: relative;
+          width: 45px;
+
+          @media (min-width: $lg) {
+            width: 200px;
+          }
+
+          .title-image {
+            width: 171px;
+            z-index: 1;
+            position: absolute;
+            top: -10px;
+            left: -5px;
+
+            @media (min-width: $lg) {
+              width: 171px;
+              z-index: 1;
+              position: absolute;
+              top: -25px;
+              left: -35px;
+            }
+
+            &:last-child {
+              top: -10px;
+              left: -5px;
+              z-index: 0;
+
+              @media (min-width: $lg) {
+                top: -25px;
+                left: -35px;
+                z-index: 0;
+              }
+
+            }
+          }
+        }
+      }
+
+
+      .subtitle-box {
+        background: #0093D8 0% 0% no-repeat padding-box;
+        border-radius: 63px;
+        display: flex;
+        padding: .5rem 1rem;
+        justify-content: space-around;
+        width: auto;
+        color: white;
+        font-size: 1.25rem;
+
+        @media (min-width: $lg) {
+          padding: 1.25rem 4rem;
+          font-size: 6rem;
+        }
+
+        .social-icon {
+          height: 1rem;
+
+          @media (min-width: $lg) {
+            height: 2.5rem;
+          }
+        }
+      }
+    }
+
   }
 }
