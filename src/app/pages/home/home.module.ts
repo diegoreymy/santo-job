@@ -8,6 +8,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { FirstBannerComponent } from './components/first-banner/first-banner.component';
 import { SecondBannerComponent } from './components/second-banner/second-banner.component';
 import { ThirdBannerComponent } from './components/third-banner/third-banner.component';
+import { WhoAreWeComponent } from './components/who-are-we/who-are-we.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ThirdBannerComponent } from './components/third-banner/third-banner.com
     HomeComponent,
     FirstBannerComponent,
     SecondBannerComponent,
-    ThirdBannerComponent
+    ThirdBannerComponent,
+    WhoAreWeComponent
   ],
   imports: [
     CommonModule,
