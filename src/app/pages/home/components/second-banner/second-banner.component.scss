@@ -1,0 +1,151 @@
+@import "/src/app/shared/styles/variables";
+
+.second-banner {
+    position: relative;
+    overflow: hidden;
+  
+    .bg {
+      width: 100vw;
+      height: 100vh;
+      background-color: white;
+      background-size: cover;
+      background-position: top center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  
+      .logo-img {
+        width: 30%;
+        height: auto;
+        position: absolute;
+        top: 2.5rem;
+        right: 35%;
+  
+        @media (min-width: $lg) {
+          width: 20%;
+          height: auto;
+          position: absolute;
+          top: 2.5rem;
+          right: 2.5rem;
+        }
+      }
+  
+      .title-box {
+        display: flex;
+        flex-direction: column;
+  
+        .first-title-text {
+          font-family: 'Futura Bk BT';
+          font-size: 2rem;
+          margin-left: 1.5rem;
+  
+          @media (min-width: $md) {
+            font-size: 3rem;
+            margin-left: 4rem;
+          }
+  
+          @media (min-width: $lg) {
+            font-size: 4rem;
+          }
+  
+          @media (min-width: $xl) {
+            font-size: 6rem;
+          }
+        }
+  
+        .second-title-group {
+          display: flex;
+          position: relative;
+  
+          .second-title-text {
+            font-family: 'Futura Book';
+            font-size: 2.5rem;
+            margin-left: 1.5rem;
+  
+            @media (min-width: $md) {
+              font-size: 4rem;
+              margin-left: 4rem;
+            }
+  
+            @media (min-width: $lg) {
+              font-size: 5.5rem;
+            }
+  
+            @media (min-width: $xl) {
+              font-size: 8.5rem;
+            }
+          }
+  
+          .images-group {
+            display: flex;
+            position: relative;
+            width: 45px;
+  
+            @media (min-width: $md) {
+              width: 64px;
+            }
+  
+            @media (min-width: $lg) {
+              width: 200px;
+            }
+  
+            .title-image {
+              width: 171px;
+              z-index: 1;
+              position: absolute;
+              top: -10px;
+              left: -5px;
+  
+              @media (min-width: $lg) {
+                width: 171px;
+                z-index: 1;
+                position: absolute;
+                top: -25px;
+                left: -35px;
+              }
+  
+              &:last-child {
+                top: -10px;
+                left: -5px;
+                z-index: 0;
+  
+                @media (min-width: $lg) {
+                  top: -25px;
+                  left: -35px;
+                  z-index: 0;
+                }
+  
+              }
+            }
+          }
+        }
+  
+  
+        .subtitle-box {
+          background: #0093D8 0% 0% no-repeat padding-box;
+          border-radius: 63px;
+          display: flex;
+          padding: 0 1rem;
+          justify-content: space-around;
+          width: auto;
+          color: white;
+          font-size: 1.25rem;
+  
+          @media (min-width: $md) {
+            padding: 0 4rem;
+            font-size: 3rem;
+          }
+  
+          @media (min-width: $lg) {
+            font-size: 4rem;
+          }
+  
+          @media (min-width: $xl) {
+            font-size: 6rem;
+          }
+        }
+      }
+  
+    }
+  }

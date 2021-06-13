@@ -5,11 +5,17 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { SwiperModule } from 'swiper/angular';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { FirstBannerComponent } from './components/first-banner/first-banner.component';
+import { SecondBannerComponent } from './components/second-banner/second-banner.component';
+import { ThirdBannerComponent } from './components/third-banner/third-banner.component';
 
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    FirstBannerComponent,
+    SecondBannerComponent,
+    ThirdBannerComponent
   ],
   imports: [
     CommonModule,
