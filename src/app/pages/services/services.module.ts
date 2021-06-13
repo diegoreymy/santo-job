@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ServicesRoutingModule } from './services-routing.module';
 import { ServicesComponent } from './services.component';
-import { SwiperModule } from 'swiper/angular';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -13,7 +13,7 @@ import { SwiperModule } from 'swiper/angular';
   imports: [
     CommonModule,
     ServicesRoutingModule,
-    SwiperModule
+    SharedModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

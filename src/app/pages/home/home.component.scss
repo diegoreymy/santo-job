@@ -1,0 +1,83 @@
+@import "/src/app/shared/styles/variables";
+
+.first-banner {
+  background: transparent radial-gradient(closest-side at 47% 60%, #83D2DA 0%, #277FB1 100%) 0% 0% no-repeat padding-box;
+  opacity: 1;
+  position: relative;
+  overflow: hidden;
+
+  .bg {
+    width: 100vw;
+    height: 100vh;
+    background: url('/assets/images/top-cloud.png') no-repeat center;
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .logo-img {
+      width: 50%;
+      height: auto;
+
+    }
+
+    .nuvems {
+      position: absolute;
+
+      &.nuvem-sm {
+        top: 45%;
+        left: 0;
+        width: 70px;
+        @media (min-width: $lg) {
+          top: 45%;
+          left: 5%;
+          width: 203px;
+        }
+      }
+
+      &.nuvem-md {
+        top: 35%;
+        right: -10%;
+        width: 100px;
+        @media (min-width: $lg) {
+          top: 35%;
+          right: -10%;
+          width: 334px;
+        }
+      }
+
+      &.nuvem-lg {
+        top: 25%;
+        left: 10%;
+        width: 100px;
+        @media (min-width: $lg) {
+          top: 25%;
+          left: 10%;
+          width: 254px;
+        }
+      }
+    }
+
+    .social-box {
+      background: #0093D8 0% 0% no-repeat padding-box;
+      border-radius: 41px;
+      display: flex;
+      padding: .5rem 1rem;
+      justify-content: space-around;
+      width: 175px;
+      @media (min-width: $lg) {
+        width: 363px;
+        padding: 1.25rem 4rem;
+      }
+
+      .social-icon {
+        height: 1rem;
+        @media (min-width: $lg) {
+          height: 2.5rem;
+        }
+      }
+    }
+  }
+}
