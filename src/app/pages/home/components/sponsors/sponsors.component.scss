@@ -1,0 +1,35 @@
+@import "/src/app/shared/styles/variables";
+
+.sponsors-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  
+  .sponsors-title {
+    font-size: 1.125rem;
+    font-family: 'Futura Book';
+    text-align: center;
+
+    @media (min-width: $lg) {
+      font-size: 1.75rem;
+    }
+
+  }
+
+  .sponsors-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+
+    .sponsors-item {
+      width: 25%;
+
+      @media (min-width: $md) {
+        width: 10%;
+      }
+    }
+  }
+}

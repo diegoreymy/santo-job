@@ -9,6 +9,7 @@ import { FirstBannerComponent } from './components/first-banner/first-banner.com
 import { SecondBannerComponent } from './components/second-banner/second-banner.component';
 import { ThirdBannerComponent } from './components/third-banner/third-banner.component';
 import { WhoAreWeComponent } from './components/who-are-we/who-are-we.component';
+import { SponsorsComponent } from './components/sponsors/sponsors.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { WhoAreWeComponent } from './components/who-are-we/who-are-we.component'
     FirstBannerComponent,
     SecondBannerComponent,
     ThirdBannerComponent,
-    WhoAreWeComponent
+    WhoAreWeComponent,
+    SponsorsComponent
   ],
   imports: [
     CommonModule,
