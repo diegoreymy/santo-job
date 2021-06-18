@@ -10,6 +10,7 @@ import { SecondBannerComponent } from './components/second-banner/second-banner.
 import { ThirdBannerComponent } from './components/third-banner/third-banner.component';
 import { WhoAreWeComponent } from './components/who-are-we/who-are-we.component';
 import { SponsorsComponent } from './components/sponsors/sponsors.component';
+import { WhatDoWeDoComponent } from './components/what-do-we-do/what-do-we-do.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { SponsorsComponent } from './components/sponsors/sponsors.component';
     SecondBannerComponent,
     ThirdBannerComponent,
     WhoAreWeComponent,
-    SponsorsComponent
+    SponsorsComponent,
+    WhatDoWeDoComponent
   ],
   imports: [
     CommonModule,

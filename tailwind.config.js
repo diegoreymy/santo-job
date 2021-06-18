@@ -13,7 +13,14 @@ module.exports = {
     },
     darkMode: false, // or 'media' or 'class'
     theme: {
-      extend: {},
+      extend: {
+        colors: {
+          'primaryBlueColor': '#0093D8',
+          'primaryYellowColor': '#D6C300',
+          'primaryBlackColor': '#231F20',
+          'disableColor': '#D9D9D9',
+        }
+      },
       container: {
         center: true,
         padding: {
