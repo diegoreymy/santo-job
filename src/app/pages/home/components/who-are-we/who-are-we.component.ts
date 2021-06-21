@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: '[app-who-are-we]',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./who-are-we.component.scss']
 })
 export class WhoAreWeComponent implements OnInit {
+
+  @Input() view: string = 'default';
 
   constructor() { }
 

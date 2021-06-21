@@ -20,8 +20,12 @@
     .title-img {
       width: 70%;
 
-      @media (min-width: $lg) {
+      @media (min-width: $md) {
         width: 50%;
+      }
+
+      @media (min-width: $lg) {
+        width: 500px;
       }
     }
 
@@ -34,7 +38,13 @@
         width: 70px;
 
         @media (min-width: $lg) {
-          top: 45%;
+          top: 70%;
+          left: 10%;
+          width: 203px;
+        }
+
+        @media (min-width: $xl) {
+          top: 60%;
           left: 5%;
           width: 203px;
         }
@@ -50,6 +60,12 @@
           right: -10%;
           width: 334px;
         }
+
+        @media (min-width: $xl) {
+          top: 35%;
+          right: 0;
+          width: 334px;
+        }
       }
 
       &.nuvem-lg {
@@ -58,9 +74,15 @@
         width: 100px;
 
         @media (min-width: $lg) {
+          top: 30%;
+          left: 5%;
+          width: 254px;
+        }
+
+        @media (min-width: $xl) {
           top: 25%;
           left: 10%;
-          width: 254px;
+          width: 300px;
         }
       }
     }
@@ -75,7 +97,7 @@
 
       @media (min-width: $lg) {
         width: 363px;
-        padding: 1.25rem 4rem;
+        padding: 1rem 4rem;
       }
 
       .social-icon {

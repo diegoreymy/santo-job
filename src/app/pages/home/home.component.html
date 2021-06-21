@@ -1,10 +1,60 @@
-<section app-first-banner></section>
+<!-- <section app-first-banner></section>
 <section app-second-banner></section>
 <section app-third-banner></section>
 <header app-header></header>
 <main>
   <section app-who-are-we></section>
   <section app-what-do-we-do></section>
+  <section app-curiosity></section>
   <section app-sponsors></section>
 </main>
-<footer app-footer></footer>
+<footer app-footer></footer> -->
+
+<swiper [direction]="'vertical'" [slidesPerView]="1" [spaceBetween]="30" [mousewheel]="true" [pagination]="{
+      clickable: true
+    }" class="mySwiper">
+  <ng-template swiperSlide>
+    <section app-first-banner></section>
+  </ng-template>
+  <ng-template swiperSlide>
+    <section app-second-banner></section>
+  </ng-template>
+  <ng-template swiperSlide>
+    <section app-third-banner></section>
+  </ng-template>
+  <ng-container *ngIf="!isMobile">
+    <ng-template swiperSlide>
+      <header app-header></header>
+      <section app-who-are-we></section>
+    </ng-template>
+  </ng-container>
+  <ng-container *ngIf="isMobile">
+    <ng-template swiperSlide>
+      <header app-header></header>
+      <section app-who-are-we view='page-1'></section>
+    </ng-template>
+    <ng-template swiperSlide>
+      <header app-header></header>
+      <section app-who-are-we view='page-2'></section>
+    </ng-template>
+  </ng-container>
+  <ng-container *ngIf="!isMobile">
+    <ng-template swiperSlide>
+      <header app-header></header>
+      <section app-what-do-we-do></section>
+    </ng-template>
+  </ng-container>
+  <ng-container *ngIf="isMobile">
+    <ng-template swiperSlide>
+      <header app-header></header>
+      <section app-what-do-we-do view='page-1'></section>
+    </ng-template>
+    <ng-template swiperSlide>
+      <header app-header></header>
+      <section app-what-do-we-do view='page-2'></section>
+    </ng-template>
+  </ng-container>
+  <ng-template swiperSlide>
+    <footer app-footer></footer>
+  </ng-template>
+</swiper>

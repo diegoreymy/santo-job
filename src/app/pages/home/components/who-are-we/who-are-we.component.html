@@ -1,25 +1,76 @@
-<div class="container container-who-are-we">
-    <h2 class="main-title">Quem somos</h2>
-    <div class="main-content-section">
-        <div class="joao-neto-image">
-            <img src="/assets/images/joao-neto.png" alt="Imagem de João Neto">
-            <div class="image-titles-tablet">
+<ng-container *ngIf="view === 'default'">
+    <div class="container container-who-are-we">
+        <h2 class="main-title">Quem somos</h2>
+        <div class="main-content-section">
+            <div class="joao-neto-image">
+                <img src="/assets/images/joao-neto.png" alt="Imagem de João Neto">
+                <div class="image-titles-tablet">
+                    <h3 class="text-content-title">João Neto</h3>
+                    <h4 class="text-content-subtitle">Gerente de Atendimento e de Novos Negócios</h4>
+                </div>
+            </div>
+            <div class="text-content">
                 <h3 class="text-content-title">João Neto</h3>
                 <h4 class="text-content-subtitle">Gerente de Atendimento e de Novos Negócios</h4>
+                <p class="text-content-description">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                    unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived
+                    not only five centuries, but also the leap into electronic typesetting, remaining essentially
+                    unchanged.</p>
+            </div>
+            <div class="map-section">
+                <img src="/assets/images/brazil-map.png" alt="mapa do brazil" class="map-image">
             </div>
         </div>
-        <div class="text-content">
-            <h3 class="text-content-title">João Neto</h3>
-            <h4 class="text-content-subtitle">Gerente de Atendimento e de Novos Negócios</h4>
-            <p class="text-content-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-        </div>
-        <div class="map-section">
-            <img src="/assets/images/brazil-map.png" alt="mapa do brazil" class="map-image">
+    </div>
+    <div class="footer-content">
+        <div class="container">
+            <p class="footer-content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                took a galley of type and scrambled it to make a type specimen book. It has survived not only five
+                centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
         </div>
     </div>
-</div>
-<div class="footer-content">
-    <div class="container">
-        <p class="footer-content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+</ng-container>
+
+
+<ng-container *ngIf="view === 'page-1'">
+    <div class="container container-who-are-we">
+        <h2 class="main-title">Quem somos</h2>
+        <div class="main-content-section">
+            <div class="joao-neto-image">
+                <img src="/assets/images/joao-neto.png" alt="Imagem de João Neto">
+                <div class="image-titles-tablet">
+                    <h3 class="text-content-title">João Neto</h3>
+                    <h4 class="text-content-subtitle">Gerente de Atendimento e de Novos Negócios</h4>
+                </div>
+            </div>
+            <div class="text-content">
+                <p class="text-content-description">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                    unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived
+                    not only five centuries, but also the leap into electronic typesetting, remaining essentially
+                    unchanged.</p>
+            </div>
+        </div>
     </div>
-</div>
+</ng-container>
+
+<ng-container *ngIf="view === 'page-2'">
+    <div class="container container-who-are-we">
+        <h2 class="main-title">Quem somos</h2>
+        <div class="main-content-section">
+            <div class="map-section">
+                <img src="/assets/images/brazil-map.png" alt="mapa do brazil" class="map-image">
+            </div>
+        </div>
+    </div>
+    <div class="footer-content">
+        <div class="container">
+            <p class="footer-content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                took a galley of type and scrambled it to make a type specimen book. It has survived not only five
+                centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+        </div>
+    </div>
+</ng-container>

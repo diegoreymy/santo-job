@@ -11,6 +11,7 @@ import { ThirdBannerComponent } from './components/third-banner/third-banner.com
 import { WhoAreWeComponent } from './components/who-are-we/who-are-we.component';
 import { SponsorsComponent } from './components/sponsors/sponsors.component';
 import { WhatDoWeDoComponent } from './components/what-do-we-do/what-do-we-do.component';
+import { CuriosityComponent } from './components/curiosity/curiosity.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { WhatDoWeDoComponent } from './components/what-do-we-do/what-do-we-do.co
     ThirdBannerComponent,
     WhoAreWeComponent,
     SponsorsComponent,
-    WhatDoWeDoComponent
+    WhatDoWeDoComponent,
+    CuriosityComponent
   ],
   imports: [
     CommonModule,

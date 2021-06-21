@@ -9,30 +9,13 @@
   padding: 1rem;
   gap: 1rem;
 
-  @media (min-width: $lg) {
-    padding: 88px 0 50px;
-    gap: 4rem;
-  }
-
-  @media (min-width: $xl) {
-    padding: 88px 0 115px;
-  }
-
   .main-title {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     font-family: 'Futura Book';
     text-align: center;
 
     @media (min-width: $md) {
-      font-size: 2.5rem;
-    }
-
-    @media (min-width: $lg) {
-      font-size: 4rem;
-    }
-
-    @media (min-width: $xl) {
-      font-size: 6rem;
+      font-size: 2rem;
     }
   }
 
@@ -48,39 +31,75 @@
     }
 
     .services-list {
-        .services-item {
-            &:nth-child(odd) {
-                .services-item-link {
-                    background-color: $primaryBlueColor;
-                }
-            }
-            &:nth-child(even) {
-                .services-item-link {
-                    background-color: $primaryBlackColor;
-                }
-            }
-            .services-item-link {
-                box-shadow: 3px 3px 5px #00000080;
-                border-radius: 34px;
-                padding: 1rem;
-                display: flex;
-                flex-direction: column;
-                text-align: center;
-                color: white;
-                font-size: 'Futura Book';
-                font-size: 1rem;
-                justify-content: center;
-                align-items: center;
-                gap: .5rem;
-                .services-item-image {
-                    height: 100px;
-                }
-                .services-item-text {
-                    min-height: 3rem;
-                }
-            }
-           
+      .services-item {
+        &:nth-child(odd) {
+          .services-item-link {
+            background-color: $primaryBlueColor;
+          }
         }
+
+        &:nth-child(even) {
+          .services-item-link {
+            background-color: $primaryYellowColor;
+          }
+        }
+
+        @media (max-width: $sm) {
+          &:nth-child(3) {
+            .services-item-link {
+              background-color: $primaryYellowColor;
+            }
+          }
+
+          &:nth-child(4) {
+            .services-item-link {
+              background-color: $primaryBlueColor;
+            }
+          }
+        }
+
+        @media (min-width: $lg) {
+          &:nth-child(7), &:nth-child(9), &:nth-child(11) {
+            .services-item-link {
+              background-color: $primaryYellowColor;
+            }
+          }
+
+          &:nth-child(8), &:nth-child(10), &:nth-child(12) {
+            .services-item-link {
+              background-color: $primaryBlueColor;
+            }
+          }
+        }
+
+        .services-item-link {
+          box-shadow: 3px 3px 5px #00000080;
+          border-radius: 34px;
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          color: white;
+          font-size: 'Futura Book';
+          font-size: 1rem;
+          justify-content: center;
+          align-items: center;
+          gap: .5rem;
+
+          .services-item-image {
+            height: 35px;
+
+            @media (min-width: $lg) {
+              height: 100px;
+            }
+          }
+
+          .services-item-text {
+            min-height: 3rem;
+          }
+        }
+
+      }
     }
   }
 }

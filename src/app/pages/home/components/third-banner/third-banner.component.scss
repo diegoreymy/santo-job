@@ -73,11 +73,6 @@
             width: 50%;
           }
   
-          @media (min-width: $xl) {
-            font-size: 5rem;
-            width: 50%;
-          }
-  
           .images-group {
             width: 45px;
             position: absolute;
@@ -161,11 +156,7 @@
         }
   
         @media (min-width: $lg) {
-          font-size: 4rem;
-        }
-  
-        @media (min-width: $xl) {
-          font-size: 5rem;
+          font-size: 3rem;
         }
       }
     }

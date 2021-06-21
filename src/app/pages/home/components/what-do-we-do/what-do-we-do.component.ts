@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IServiceList, SERVICES_LIST } from 'src/app/shared/constants/services-list.constant';
 
 @Component({
@@ -8,6 +8,8 @@ import { IServiceList, SERVICES_LIST } from 'src/app/shared/constants/services-l
 })
 export class WhatDoWeDoComponent implements OnInit {
 
+  @Input() view: string = 'default';
+  
   servicesList: IServiceList[] = SERVICES_LIST;
 
   constructor() { }
