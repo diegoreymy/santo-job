@@ -230,6 +230,11 @@
 
   @media (min-width: $md) {
     border-top: none;
+    bottom: 80px;
+  }
+
+  @media (min-width: $lg) {
+    bottom: 120px;
   }
 
   @media (min-width: $xl) {

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { fromEvent, Observable, Subscription } from 'rxjs';
-import SwiperCore, { Mousewheel, Pagination } from "swiper/core";
+import SwiperCore, { Mousewheel, Pagination, Swiper } from "swiper/core";
 SwiperCore.use([Mousewheel, Pagination]);
 
 @Component({
@@ -14,8 +14,9 @@ export class HomeComponent implements OnInit {
   isMobile = window.innerWidth < 768;
   resizeObservable$: Observable<Event> = new Observable();
   resizeSubscription$: Subscription = new Subscription();
+  visibleHeader: boolean = false;
 
-  constructor() { }
+  constructor(private changeDetectorRef: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.resizeObservable$ = fromEvent(window, 'resize')
@@ -23,6 +24,12 @@ export class HomeComponent implements OnInit {
       const w = evt.target as Window; 
       this.isMobile = w.innerWidth < 768;
     })
+  }
+
+  onSlideChange(event: any) {
+    const swiper = event as Swiper;
+    this.visibleHeader = swiper?.activeIndex >= 3;
+    this.changeDetectorRef.detectChanges();
   }
 
   ngOnDestroy() {
