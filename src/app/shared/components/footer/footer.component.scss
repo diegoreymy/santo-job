@@ -3,11 +3,13 @@
 :host {
   background-color: $primaryBlueColor;
   padding: 1rem 0 1rem;
+  height: 100vh;
+  width: 100vw;
   @media (min-width: $md) {
     padding: 37px 0 72px;
   }
   @media (min-width: $lg) {
-    padding: 96px 0 86px;
+    padding: 24px 0 16px;
   }
 }
 
@@ -18,8 +20,8 @@
     border-radius: 1rem;
 
     @media (min-width: $lg) {
-      border-radius: 83px;
-      padding: 32px 40px;
+      border-radius: 2rem;
+      padding: 1rem 1.5rem;
     }
 
     .input-control {
@@ -38,8 +40,8 @@
 
       @media (min-width: $md) {
         width: 321px;
-        height: 71px;
-        bottom: -35px;
+        height: 50px;
+        bottom: -25px;
         left: calc(50% - 160px);
       }
     }
