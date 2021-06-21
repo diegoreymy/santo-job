@@ -228,9 +228,14 @@
   padding: 1rem 0;
   border-top: 1px solid white;
 
+  @media (min-width: $sm) {
+    border-top: none;
+    bottom: 5rem;
+  }
+
   @media (min-width: $md) {
     border-top: none;
-    bottom: 80px;
+    bottom: 5rem;
   }
 
   @media (min-width: $lg) {
