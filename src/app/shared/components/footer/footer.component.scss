@@ -2,7 +2,9 @@
 
 :host {
   background-color: $primaryBlueColor;
-  padding: 37px 0 72px;
+  @media (min-width: $md) {
+    padding: 37px 0 72px;
+  }
   @media (min-width: $lg) {
     padding: 96px 0 86px;
   }

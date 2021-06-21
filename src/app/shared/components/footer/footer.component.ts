@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,8 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
+
+  @Input() view: string = 'default';
 
   contactForm = new FormGroup({
     nome: new FormControl(''),

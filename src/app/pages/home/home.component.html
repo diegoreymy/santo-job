@@ -37,7 +37,17 @@
       <section app-what-do-we-do view='page-2'></section>
     </ng-template>
   </ng-container>
-  <ng-template swiperSlide>
-    <footer app-footer></footer>
-  </ng-template>
+  <ng-container *ngIf="!isMobile">
+    <ng-template swiperSlide>
+      <footer app-footer></footer>
+    </ng-template>
+  </ng-container>
+  <ng-container *ngIf="isMobile">
+    <ng-template swiperSlide>
+      <footer app-footer view='page-1'></footer>
+    </ng-template>
+    <ng-template swiperSlide>
+      <footer app-footer view='page-2'></footer>
+    </ng-template>
+  </ng-container>
 </swiper>
