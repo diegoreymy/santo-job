@@ -32,6 +32,10 @@ export class HomeComponent implements OnInit {
     this.changeDetectorRef.detectChanges();
   }
 
+  reload() {
+    this.changeDetectorRef.detectChanges();
+  }
+
   ngOnDestroy() {
     this.resizeSubscription$.unsubscribe()
   }
