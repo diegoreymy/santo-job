@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit {
   }
 
   onClickLink(itemMenuSelected: number) {
+    this.open = false;
     this.onItemMenuSelected.emit(itemMenuSelected);
   }
 }
