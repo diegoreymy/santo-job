@@ -3,7 +3,7 @@
         <h2 class="main-title">O que fazemos?</h2>
         <div class="main-content-section">
             <ul class="services-list flex flex-wrap -mx-2 overflow-hidden sm:-mx-3 md:-mx-3 lg:-mx-3 xl:-mx-3">
-                <li class="services-item my-2 px-2 w-1/2 sm:my-3 sm:px-3 sm:w-1/3 md:my-3 md:px-3 md:w-1/3 lg:my-3 lg:px-3 lg:w-1/4 xl:my-3 xl:px-6 xl:w-1/6"
+                <li class="services-item my-2 px-2 w-1/2 sm:my-3 sm:px-3 sm:w-1/3 md:my-2 md:px-3 md:w-1/4 lg:my-3 lg:px-3 lg:w-1/4 xl:my-3 xl:px-6 xl:w-1/6"
                     *ngFor="let service of servicesList">
                     <a [routerLink]="[service.link]" routerLinkActive="router-link-active" class="services-item-link">
                         <img [attr.src]="service.img" alt="icone de publicidade" class="services-item-image">

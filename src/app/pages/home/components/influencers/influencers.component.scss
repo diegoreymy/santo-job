@@ -1,0 +1,123 @@
+@import "/src/app/shared/styles/variables";
+
+:host {
+  height: calc(100vh - 80px);
+  @media (min-width: $lg) {
+    height: calc(100vh - 120px);
+  }
+}
+
+.container-influencers {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+  gap: 1rem;
+  height: 100%;
+  justify-content: space-between;
+
+  @media (min-width: $lg) {
+    position: relative;
+    align-items: center;
+    padding: 2rem;
+    gap: 3rem;
+  }
+
+  .main-title {
+    font-size: 1.25rem;
+    font-family: 'Futura Book';
+    text-align: center;
+
+    @media (min-width: $md) {
+      font-size: 2rem;
+    }
+  }
+
+  .influencers-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+
+    @media (min-width: $lg) {
+      margin: 0 auto;
+      width: 50%;
+      justify-content: space-around;
+    }
+
+    .influencers-item {
+      &:nth-child(odd) {
+        .influencers-item-link {
+          background-color: $primaryBlueColor;
+        }
+      }
+
+      &:nth-child(even) {
+        .influencers-item-link {
+          background-color: $primaryYellowColor;
+        }
+      }
+
+      .influencers-item-link {
+        box-shadow: 3px 3px 5px #00000080;
+        border-radius: 20px;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: white;
+        font-size: 'Futura Book';
+        font-size: 1rem;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        height: 75px;
+        width: 80px;
+
+        @media (min-width: $md) {
+          height: 100px;
+          width: 115px
+        }
+
+        @media (min-width: $lg) {
+          border-radius: 34px;
+          height: 150px;
+          width: 175px;
+        }
+
+        .influencers-item-image {
+          height: 100%;
+        }
+      }
+
+    }
+  }
+
+  .influencers-text {
+    font-size: 1rem;
+    font-family: 'Futura Book';
+    text-align: center;
+  }
+
+  .influencers-button {
+    background-color: $primaryBlueColor;
+    border-radius: 28px;
+    padding: .5rem 0;
+    color: #FFFFFF;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 'Futura Book';
+
+    @media (min-width: $md) {
+        width: 50%;
+    }
+
+    @media (min-width: $lg) {
+      border-radius: 33px;
+      width: 365px;
+    }
+  }
+
+}

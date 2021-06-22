@@ -1,5 +1,12 @@
 @import "/src/app/shared/styles/variables";
 
+:host {
+  height: calc(100vh - 80px);
+  @media (min-width: $lg) {
+    height: calc(100vh - 120px);
+  }
+}
+
 .container-what-do-we-do {
   display: flex;
   justify-content: center;
@@ -10,7 +17,7 @@
   gap: 1rem;
 
   @media (min-width: $lg) {
-    padding: 2rem 0;
+    padding: 2rem;
     gap: 3rem;
   }
 
@@ -57,6 +64,20 @@
           }
 
           &:nth-child(4) {
+            .services-item-link {
+              background-color: $primaryBlueColor;
+            }
+          }
+        }
+
+        @media (min-width: $md) {
+          &:nth-child(5), &:nth-child(7), &:nth-child(10), &:nth-child(12) {
+            .services-item-link {
+              background-color: $primaryYellowColor;
+            }
+          }
+
+          &:nth-child(6), &:nth-child(8), &:nth-child(9), &:nth-child(11) {
             .services-item-link {
               background-color: $primaryBlueColor;
             }

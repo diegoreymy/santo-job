@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
 
   
   isMobile = window.innerWidth < 768;
+  isTablet = window.innerWidth < 1024 && window.innerWidth >= 768;
   resizeObservable$: Observable<Event> = new Observable();
   resizeSubscription$: Subscription = new Subscription();
   visibleHeader: boolean = false;

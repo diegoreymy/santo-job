@@ -12,6 +12,7 @@ import { WhoAreWeComponent } from './components/who-are-we/who-are-we.component'
 import { SponsorsComponent } from './components/sponsors/sponsors.component';
 import { WhatDoWeDoComponent } from './components/what-do-we-do/what-do-we-do.component';
 import { CuriosityComponent } from './components/curiosity/curiosity.component';
+import { InfluencersComponent } from './components/influencers/influencers.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CuriosityComponent } from './components/curiosity/curiosity.component';
     WhoAreWeComponent,
     SponsorsComponent,
     WhatDoWeDoComponent,
-    CuriosityComponent
+    CuriosityComponent,
+    InfluencersComponent
   ],
   imports: [
     CommonModule,
