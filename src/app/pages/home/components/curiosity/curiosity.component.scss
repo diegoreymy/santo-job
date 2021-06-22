@@ -1,27 +1,154 @@
 @import "/src/app/shared/styles/variables";
 
+:host {
+  height: calc(100vh - 80px);
+
+  @media (min-width: $lg) {
+    height: calc(100vh - 120px);
+  }
+}
+
 .curiosity-container {
   background: transparent radial-gradient(closest-side at 47% 60%, #80CFD8 0%, #67B9CD 100%) 0% 0% no-repeat padding-box;
   opacity: 1;
   position: relative;
   overflow: hidden;
+  height: calc(100vh - 80px);
+
+  @media (min-width: $lg) {
+    height: calc(100vh - 120px);
+  }
 
   .bg {
     width: 100%;
-    height: 100vh;
-    background: url('/assets/images/down-cloud.png') no-repeat center;
+    background: url(/assets/images/down-cloud.png) no-repeat center;
     background-size: cover;
-    background-position: top center;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    height: calc(100vh - 80px);
+
+    @media (min-width: $lg) {
+      height: calc(100vh - 120px);
+      justify-content: flex-end;
+    }
 
     .title-img {
       width: 70%;
 
       @media (min-width: $lg) {
         width: 50%;
+      }
+    }
+
+    .title-section {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      gap: 0.5rem;
+      text-align: center;
+      justify-content: space-around;
+      margin-top: 2rem;
+
+      @media (min-width: $lg) {
+        width: 50%;
+        margin-top: 4rem;
+        text-align: left;
+      }
+
+      .title-one {
+        font-family: 'Maybe Maybe Not';
+        font-size: 2rem;
+        position: relative;
+
+        @media (min-width: $md) {
+          font-size: 2rem;
+        }
+
+        @media (min-width: $lg) {
+          font-size: 2rem;
+          width: 50%;
+        }
+
+        .title-one-text {
+          position: relative;
+          width: fit-content;
+          margin: 0 auto;
+
+          @media (min-width: $lg) {
+            margin: 0;
+          }
+
+          .images-group {
+            width: 45px;
+            position: absolute;
+            top: -20px;
+            left: auto;
+            right: -45px;
+
+            @media (min-width: $md) {
+              left: 100px;
+              right: auto;
+            }
+
+            @media (min-width: $lg) {
+              width: 200px;
+              top: -36px;
+              left: 160px;
+              right: auto;
+            }
+
+            @media (min-width: $xl) {
+              width: 85px;
+              top: -32px;
+              right: -105px;
+              left: auto;
+            }
+
+            .title-image {
+              width: 171px;
+              z-index: 1;
+              position: absolute;
+              top: -10px;
+              left: -5px;
+
+              @media (min-width: $lg) {
+                width: 96px;
+                top: -25px;
+                left: -35px;
+              }
+
+              @media (min-width: $xl) {
+                width: 171px;
+                left: -35px;
+              }
+
+              &:last-child {
+                top: -10px;
+                left: -5px;
+                z-index: 0;
+
+                @media (min-width: $lg) {
+                  top: -25px;
+                  left: -35px;
+                  z-index: 0;
+                }
+
+              }
+            }
+          }
+        }
+
+
+      }
+
+      .text-box {
+        font-family: 'Futura Bk BT';
+        margin-bottom: 0.5rem;
+      }
+
+      .final-text {
+        font-family: 'Maybe Maybe Not';
+        font-size: 1.5rem;
       }
     }
 
@@ -34,10 +161,23 @@
         width: 100px;
 
         @media (min-width: $xl) {
-            top: 35%;
-            left: 15%;
-            width: 300px;
+          top: 30%;
+          left: 20%;
+          width: 230px;
         }
+      }
+    }
+
+    .subtitle-box {
+      font-size: 1.25rem;
+      font-family: 'Futura Book';
+
+      @media (min-width: $md) {
+        font-size: 1.5rem;
+      }
+
+      @media (min-width: $lg) {
+        font-size: 1.5rem;
       }
     }
   }
