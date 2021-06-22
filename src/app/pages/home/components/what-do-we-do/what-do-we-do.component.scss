@@ -15,10 +15,12 @@
   overflow: hidden;
   padding: 1rem;
   gap: 1rem;
+  height: calc(100vh - 80px);
 
   @media (min-width: $lg) {
     padding: 2rem;
     gap: 3rem;
+    height: calc(100vh - 120px);
   }
 
   .main-title {
@@ -35,6 +37,8 @@
     display: flex;
     gap: 1rem;
     flex-direction: column;
+    height: 100%;
+    justify-content: center;
 
     @media (min-width: $lg) {
       flex-direction: row;
