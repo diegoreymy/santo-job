@@ -1,7 +1,7 @@
-<header app-header *ngIf="visibleHeader" (click)="reload()"></header>
+<header app-header *ngIf="visibleHeader" [activeMenu]='activeSlide' (click)="reload()" (onItemMenuSelected)="onSelectedSlide($event)"></header>
 <swiper [direction]="'vertical'" [slidesPerView]="1" [spaceBetween]="30" [mousewheel]="true" [pagination]="{
       clickable: true
-    }" class="mySwiper" (slideChange)="onSlideChange($event)">
+    }" class="mySwiper" (slideChange)="onSlideChange($event)" (swiper)="onSwiper($event)" >
   <ng-template swiperSlide>
     <section app-first-banner></section>
   </ng-template>

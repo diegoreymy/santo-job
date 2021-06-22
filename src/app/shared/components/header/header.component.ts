@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: '[app-header]',
@@ -7,12 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  open: boolean = false;
-  
+  @Input() activeMenu = 3;
+  @Output() onItemMenuSelected = new EventEmitter<number>();
+
+  open = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
-  
 
+  onClickLink(itemMenuSelected: number) {
+    this.onItemMenuSelected.emit(itemMenuSelected);
+  }
 }
