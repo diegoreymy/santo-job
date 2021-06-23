@@ -37,6 +37,7 @@ export class HomeComponent implements OnInit {
     const swiper = event as Swiper;
     this.visibleHeader = swiper?.activeIndex >= 3;
     this.activeSlide = swiper?.activeIndex;
+    console.log((this.activeSlide))
     this.changeDetectorRef.detectChanges();
   }
 

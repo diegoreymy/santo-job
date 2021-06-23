@@ -38,7 +38,7 @@
     </ng-template>
   </ng-container>
   <ng-template swiperSlide>
-    <section app-influencers></section>
+    <section app-influencers (onClickBtn)="onSelectedSlide($event)"></section>
   </ng-template>
   <ng-template swiperSlide>
     <section app-curiosity></section>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: '[app-influencers]',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfluencersComponent implements OnInit {
 
+  @Output() onClickBtn = new EventEmitter<number>();
+
+  isMobile = window.innerHeight < 768;
+  isTablet = window.innerWidth < 1024 && window.innerWidth >= 768;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onClickButton() {
+    this.onClickBtn.emit(this.isMobile ? 9 : 7);
   }
 
 }
