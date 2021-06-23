@@ -1,5 +1,46 @@
 @import "/src/app/shared/styles/variables";
 
-footer{
-  height: 100%;
+main {
+  height: calc(100vh - 80px);
+  @media (min-width: $lg) {
+    height: calc(100vh - 120px);
+  }
 }
+
+footer{
+  height: calc(100vh - 80px);
+  @media (min-width: $lg) {
+    height: calc(100vh - 120px);
+  }
+}
+
+.container-services {
+  display: flex;
+  flex-direction: column;
+  .services-header {
+    display: flex;
+    .back-btn {
+      background: #0091DA 0% 0% no-repeat padding-box;
+      border-radius: 24px;
+      color: white;
+      padding: 0.5rem 3rem;
+    }
+  }
+  .services-content {
+    background: transparent radial-gradient(closest-side at 47% 60%, #80CFD8 0%, #67B9CD 100%) 0% 0% no-repeat padding-box;
+    position: relative;
+    .services-content-text {
+      color: white;
+      margin-left: 0;
+    }
+    .services-content-button {
+      background: #0091DA 0% 0% no-repeat padding-box;
+      border-radius: 33px;
+      color: white;
+      padding: 0.5rem 5rem;
+    }
+  }
+
+}
+
+

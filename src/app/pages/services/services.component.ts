@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -11,13 +12,18 @@ export class ServicesComponent implements OnInit {
   slug: string;
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private viewportScroller: ViewportScroller
   ) {
     this.slug = this.route.snapshot.paramMap.get('slug') || '';
     console.log(this.slug)
    }
 
   ngOnInit(): void {
+  }
+
+  onClickButton() {
+    this.viewportScroller.scrollToAnchor('footer');
   }
 
 }

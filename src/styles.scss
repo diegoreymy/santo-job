@@ -4,6 +4,10 @@
 @import "~swiper/swiper-bundle";
 /* You can add global styles to this file, and also import other style files */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Futura Bk BT'
 }

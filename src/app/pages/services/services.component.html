@@ -1,6 +1,27 @@
-
 <header app-header></header>
 <main>
-    <p>services works!</p>
+  <div class="container-services h-full">
+    <div class="services-header h-1/5">
+      <div class="container">
+        <img src="" alt="">
+        <h1>{{slug}}</h1>
+        <button class="back-btn">voltar</button>
+      </div>
+    </div>
+    <div class="services-content h-4/5">
+      <div class="container">
+        <p class="services-content-text futura-book-bold w-full sm:w-1/2">Lorem ipsum dolor sit amet, consectetuer
+          adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+          wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+          commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+          vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+          praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons
+          ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+          volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+          aliquip ex ea commodo conse</p>
+        <button class="services-content-button" (click)="onClickButton()">Solicitar orçamento</button>
+      </div>
+    </div>
+  </div>
 </main>
-<footer app-footer></footer>
+<footer id="footer" app-footer></footer>
