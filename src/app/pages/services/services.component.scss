@@ -24,20 +24,24 @@ footer{
       border-radius: 24px;
       color: white;
       padding: 0.5rem 3rem;
+      font-family: 'Futura Book';
     }
   }
   .services-content {
+    padding: 2rem 0;
     background: transparent radial-gradient(closest-side at 47% 60%, #80CFD8 0%, #67B9CD 100%) 0% 0% no-repeat padding-box;
     position: relative;
     .services-content-text {
       color: white;
       margin-left: 0;
+      line-height: 35px;
     }
     .services-content-button {
       background: #0091DA 0% 0% no-repeat padding-box;
       border-radius: 33px;
       color: white;
-      padding: 0.5rem 5rem;
+      padding: 0.5rem 0;
+      font-family: 'Futura Book';
     }
   }
 

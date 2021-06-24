@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { fromEvent, Observable, Subscription } from 'rxjs';
 import SwiperCore, { Mousewheel, Pagination, Swiper } from 'swiper/core';
 SwiperCore.use([Mousewheel, Pagination]);
@@ -18,8 +19,17 @@ export class HomeComponent implements OnInit {
   visibleHeader = false;
   activeSlide = 0;
   swiper: any;
+  fragment = '';
 
-  constructor(private changeDetectorRef: ChangeDetectorRef) { }
+  constructor(
+    private changeDetectorRef: ChangeDetectorRef,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {
+    this.route.fragment.subscribe( fragment => {
+      this.fragment = fragment;
+    })
+   }
 
   ngOnInit(): void {
     this.resizeObservable$ = fromEvent(window, 'resize');
@@ -31,6 +41,10 @@ export class HomeComponent implements OnInit {
 
   onSwiper(swiper: Swiper) {
     this.swiper = swiper;
+    if (this.fragment === 'o-que-fazemos') {
+      this.swiper.slideTo(this.isMobile ? 5 : 4, 1000);
+      this.router.navigate(['/']);
+    }
   }
 
   onSlideChange(event: any) {

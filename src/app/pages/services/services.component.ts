@@ -1,6 +1,7 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { IServiceList, SERVICES_LIST } from 'src/app/shared/constants/services-list.constant';
 
 @Component({
   selector: 'app-services',
@@ -10,19 +11,22 @@ import { ActivatedRoute } from '@angular/router';
 export class ServicesComponent implements OnInit {
 
   slug: string;
+  servicesList: IServiceList[] = SERVICES_LIST;
+  serviceItem: IServiceList = {} as IServiceList;
 
   constructor(
     private route: ActivatedRoute,
-    private viewportScroller: ViewportScroller
+    private viewportScroller: ViewportScroller,
+    private router: Router
   ) {
     this.slug = this.route.snapshot.paramMap.get('slug') || '';
-    console.log(this.slug)
+    this.serviceItem = this.servicesList.find((service: IServiceList) => service.link.split('/')[2] === this.slug) || {} as IServiceList;
    }
 
   ngOnInit(): void {
   }
 
-  onClickButton() {
+  goToFooter() {
     this.viewportScroller.scrollToAnchor('footer');
   }
 
