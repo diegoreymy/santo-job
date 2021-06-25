@@ -1,3 +1,4 @@
+import { IEmailData, MailService } from './../../services/mail.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
@@ -18,17 +19,23 @@ export class FooterComponent implements OnInit {
     mensagem: new FormControl('')
   });
 
-  constructor() { }
+  constructor(private mail: MailService) { }
 
   ngOnInit(): void {
   }
 
   onSubmit() {
-    console.log(this.contactForm.value);
+    const data: IEmailData = {
+      name: this.contactForm.controls['nome'].value,
+      telephone: this.contactForm.controls['telefone'].value,
+      _replyto: this.contactForm.controls['email'].value,
+      _subject: this.contactForm.controls['assunto'].value,
+      message: this.contactForm.controls['mensagem'].value
+    }
+    this.mail.sendEmail(data).subscribe((res: any) => console.log(res))
   }
 
   resetForm() {
     this.contactForm.reset();
   }
-
 }
