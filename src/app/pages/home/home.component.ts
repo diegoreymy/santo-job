@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { fromEvent, Observable, Subscription } from 'rxjs';
+import { CAROUSEL_ITEMS_MENU, ICarouselItemsInfo } from 'src/app/shared/constants/carousel-items.constant';
 import SwiperCore, { Mousewheel, Pagination, Swiper } from 'swiper/core';
 SwiperCore.use([Mousewheel, Pagination]);
 
@@ -19,7 +20,8 @@ export class HomeComponent implements OnInit {
   visibleHeader = false;
   activeSlide = 0;
   swiper: any;
-  fragment = '';
+  fragmentObj: ICarouselItemsInfo = {} as ICarouselItemsInfo;
+  carouselItemsMenu: ICarouselItemsInfo[] = CAROUSEL_ITEMS_MENU;
 
   constructor(
     private changeDetectorRef: ChangeDetectorRef,
@@ -27,7 +29,7 @@ export class HomeComponent implements OnInit {
     private router: Router
   ) {
     this.route.fragment.subscribe( fragment => {
-      this.fragment = fragment;
+      this.fragmentObj =  this.carouselItemsMenu.find((item: ICarouselItemsInfo) => item.fragment === fragment) || {} as ICarouselItemsInfo;
     })
    }
 
@@ -41,8 +43,8 @@ export class HomeComponent implements OnInit {
 
   onSwiper(swiper: Swiper) {
     this.swiper = swiper;
-    if (this.fragment === 'o-que-fazemos') {
-      this.swiper.slideTo(this.isMobile ? 5 : 4, 1000);
+    if (this.fragmentObj) {
+      this.swiper.slideTo(this.isMobile ? this.fragmentObj.mobile_position : this.fragmentObj.desktop_position, 1000);
       this.router.navigate(['/']);
     }
   }
@@ -51,7 +53,6 @@ export class HomeComponent implements OnInit {
     const swiper = event as Swiper;
     this.visibleHeader = swiper?.activeIndex >= 3;
     this.activeSlide = swiper?.activeIndex;
-    console.log((this.activeSlide))
     this.changeDetectorRef.detectChanges();
   }
 

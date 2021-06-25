@@ -1,14 +1,14 @@
 @import "/src/app/shared/styles/variables";
 
 main {
-  height: calc(100vh - 80px);
+  height: auto;
   @media (min-width: $lg) {
     height: calc(100vh - 120px);
   }
 }
 
 footer{
-  height: calc(100vh - 80px);
+  height: auto;
   @media (min-width: $lg) {
     height: calc(100vh - 120px);
   }
@@ -23,8 +23,15 @@ footer{
       background: #0091DA 0% 0% no-repeat padding-box;
       border-radius: 24px;
       color: white;
-      padding: 0.5rem 3rem;
       font-family: 'Futura Book';
+      padding: 0.125rem 2rem;
+      font-size: 12px;
+      align-self: self-end;
+      @media (min-width: $lg) {
+        padding: 0.5rem 3rem;
+        align-self: center;
+        font-size: 1rem;
+      }
     }
   }
   .services-content {

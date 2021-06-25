@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { CAROUSEL_ITEMS_MENU, ICarouselItemsInfo } from '../../constants/carousel-items.constant';
 
 @Component({
   selector: '[app-header]',
@@ -11,6 +12,7 @@ export class HeaderComponent implements OnInit {
   @Output() onItemMenuSelected = new EventEmitter<number>();
 
   open = false;
+  carouselItemsMenu: ICarouselItemsInfo[] = CAROUSEL_ITEMS_MENU;
 
   constructor() { }
 

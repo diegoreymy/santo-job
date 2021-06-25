@@ -30,17 +30,8 @@
           </div>
           <div class="hidden md:flex items-center md:ml-6 w-full">
             <ul class="flex space-x-4 w-full justify-around items-center">
-              <li [routerLink]="['/']" (click)="onClickLink(3)" class="futura-book-bold color-disable text-base lg:text-lg xl:text-xl selected"
-                [ngClass]="{'selected': activeMenu === 3}">Quem somos</li>
-              <li [routerLink]="['/']" (click)="onClickLink(4)" class="futura-book-bold color-disable text-base lg:text-lg xl:text-xl"
-                [ngClass]="{'selected': activeMenu === 4}">O que
-                fazemos</li>
-              <li [routerLink]="['/']" (click)="onClickLink(5)" class="futura-book-bold color-disable text-base lg:text-lg xl:text-xl"
-                [ngClass]="{'selected': activeMenu === 5}">
-                Influencers</li>
-              <li [routerLink]="['/']" (click)="onClickLink(7)" class="futura-book-bold color-disable text-base lg:text-lg xl:text-xl"
-                [ngClass]="{'selected': activeMenu === 7}">Fale
-                conosco</li>
+              <li *ngFor="let item of carouselItemsMenu" [routerLink]="['/']" [fragment]="item.fragment" (click)="onClickLink(item.desktop_position)" class="futura-book-bold color-disable text-base lg:text-lg xl:text-xl selected"
+                [ngClass]="{'selected': activeMenu === item.desktop_position}">{{item.section_name}}</li>
             </ul>
           </div>
         </div>
@@ -51,17 +42,7 @@
 <!-- Menu Mobile -->
 <div class="md:hidden absolute top-20 bg-black w-full" [hidden]="!open" id="mobile-menu">
   <ul class="px-2 pt-2 pb-3 space-y-1">
-    <li [routerLink]="['/']" class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium" (click)="onClickLink(3)" [ngClass]="{'bg-gray-700 text-white': activeMenu === 3}">
-      Quem somos</li>
-    <li [routerLink]="['/']"
-      class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium" (click)="onClickLink(5)" [ngClass]="{'bg-gray-700 text-white': activeMenu === 5}">O
-      que fazemos</li>
-    <li [routerLink]="['/']"
-      class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium" (click)="onClickLink(7)" [ngClass]="{'bg-gray-700 text-white': activeMenu === 7}">
-      Influencers</li>
-    <li [routerLink]="['/']"
-      class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium" (click)="onClickLink(9)" [ngClass]="{'bg-gray-700 text-white': activeMenu === 9}">
-      Fale
-      conosco</li>
+    <li *ngFor="let item of carouselItemsMenu" [routerLink]="['/']" [fragment]="item.fragment" class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium" (click)="onClickLink(item.mobile_position)" [ngClass]="{'bg-gray-700 text-white': activeMenu === item.mobile_position}">
+      {{item.section_name}}</li>
   </ul>
 </div>
