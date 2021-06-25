@@ -57,8 +57,10 @@ footer{
   .card-section {
     margin-top: -5rem;
     width: 280px;
+    align-self: center;
     @media (min-width: $lg) {
       width: 300px;
+      align-self: auto;
     }
   }
 
