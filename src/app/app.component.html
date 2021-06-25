@@ -1,1 +1,2 @@
+<div app-notifications [type]="(notificationParams$ | async)?.type || ''" [message]="(notificationParams$ | async)?.message || ''" class="notification" *ngIf="showNotification$ | async"></div>
 <router-outlet></router-outlet>

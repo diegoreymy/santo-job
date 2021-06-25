@@ -5,13 +5,15 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { NotificationsComponent } from './components/notifications/notifications.component';
 
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NotificationsComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NotificationsComponent
   ]
 })
 export class SharedModule { }

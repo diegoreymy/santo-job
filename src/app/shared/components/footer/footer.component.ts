@@ -1,6 +1,7 @@
 import { IEmailData, MailService } from './../../services/mail.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { NotificationService } from '../../services/notification.service';
 
 @Component({
   selector: '[app-footer]',
@@ -19,7 +20,7 @@ export class FooterComponent implements OnInit {
     mensagem: new FormControl('')
   });
 
-  constructor(private mail: MailService) { }
+  constructor(private mail: MailService, private notificationService: NotificationService) { }
 
   ngOnInit(): void {
   }
@@ -32,7 +33,11 @@ export class FooterComponent implements OnInit {
       _subject: this.contactForm.controls['assunto'].value,
       message: this.contactForm.controls['mensagem'].value
     }
-    this.mail.sendEmail(data).subscribe((res: any) => console.log(res))
+    this.mail.sendEmail(data).subscribe((res: any) => {
+      const mensagem =  res.ok ? 'Sua mensagem foi enviada!' : 'Sua mensagem não foi enviada, por favor, tente novamente.';
+      const type = res.ok ? 'Success' : 'Danger';
+      this.notificationService.showNotification(type, mensagem);
+    })
   }
 
   resetForm() {

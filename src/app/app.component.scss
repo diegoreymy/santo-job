@@ -1,0 +1,14 @@
+@import "/src/app/shared/styles/variables";
+
+.notification {
+  z-index: 99;
+  position: fixed;
+  width: 80%;
+  bottom: 10%;
+  left: 10%;
+  @media (min-width: $lg) {
+    width: 30%;
+    bottom: 10%;
+    left: 35%;
+  }
+}
