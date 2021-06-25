@@ -1,7 +1,7 @@
 <header app-header></header>
 <main>
   <div class="container-services lg:h-full">
-    <div class="services-header h-1/5">
+    <div class="services-header">
       <div class="container px-4 py-8 lg:p-0 lg:h-full">
         <div class="flex lg:px-8 lg:mx-auto flex-col-reverse lg:flex-row lg:h-full justify-between items-center gap-6 lg:gap-0">
           <div class="flex flex-col lg:flex-row lg:h-full items-center">
@@ -15,10 +15,10 @@
         </div>
       </div>
     </div>
-    <div class="services-content h-4/5">
-      <div class="container lg:h-full">
-        <div class="w-full lg:w-3/5 lg:px-8 lg:h-full flex flex-col justify-evenly gap-8">
-          <p class="services-content-text futura-book-bold w-full text-sm lg:text-base">Lorem ipsum dolor sit amet, consectetuer
+    <div class="services-content h-2/3">
+      <div class="container lg:h-full flex flex-col lg:flex-row">
+        <div class="w-full lg:w-3/5 lg:px-8 lg:h-full flex flex-col justify-evenly gap-16 lg:gap-8">
+          <p class="services-content-text futura-book-bold w-full text-sm lg:text-sm">Lorem ipsum dolor sit amet, consectetuer
             adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
             wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
             commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
@@ -28,7 +28,11 @@
             ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
             volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
             aliquip ex ea commodo conse</p>
-          <button class="services-content-button mx-auto lg:ml-0 w-4/5 lg:w-1/2" (click)="goToFooter()">Solicitar orçamento</button>
+          <button class="services-content-button mx-auto lg:ml-0 w-4/5 lg:w-1/2 invisible lg:visible" (click)="goToFooter()">Solicitar orçamento</button>
+        </div>
+        <div class='card-section lg:w-2/5 flex flex-col gap-8 lg:gap-0'>
+          <section app-cards-carousel></section>
+          <button class="services-content-button mx-auto lg:ml-0 w-4/5 lg:w-1/2 lg:hidden" (click)="goToFooter()">Solicitar orçamento</button>
         </div>
       </div>
     </div>
