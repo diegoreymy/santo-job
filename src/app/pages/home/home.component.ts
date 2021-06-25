@@ -45,7 +45,6 @@ export class HomeComponent implements OnInit {
     this.swiper = swiper;
     if (this.fragmentObj) {
       this.swiper.slideTo(this.isMobile ? this.fragmentObj.mobile_position : this.fragmentObj.desktop_position, 1000);
-      this.router.navigate(['/']);
     }
   }
 
