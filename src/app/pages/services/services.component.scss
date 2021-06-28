@@ -34,12 +34,24 @@ footer{
         font-size: 1rem;
       }
     }
+    .back-icon {
+      display: flex;
+      justify-content: flex-start;
+      background: none;
+      color: #0091DA;
+      padding: 0.125rem 1rem;
+      font-size: 24px;
+      align-self: self-end;
+    }
   }
   .services-content {
     padding: 2rem 0;
-    background: transparent radial-gradient(closest-side at 47% 60%, #80CFD8 0%, #67B9CD 100%) 0% 0% no-repeat padding-box;
+    background: linear-gradient(180deg,#80CFD8 calc(100% - 248px),#fff calc(100% - 248px));
     position: relative;
     height: 75%;
+    @media (min-width: $lg) {
+      background: transparent radial-gradient(closest-side at 47% 60%, #80CFD8 0%, #67B9CD 100%) 0% 0% no-repeat padding-box;
+    }
     .services-content-text {
       color: white;
       margin-left: 0;

@@ -128,4 +128,17 @@
       }
     }
   }
+
+  .see-more-btn {
+    background: #0091DA 0% 0% no-repeat padding-box;
+    border-radius: 16px;
+    color: white;
+    font-family: "Futura Book";
+    padding: 0.35rem 2rem;
+    font-size: 14px;
+    align-self: center;
+    @media (min-width: $md) {
+      display: none;
+    }
+  }
 }

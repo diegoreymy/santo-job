@@ -37,6 +37,7 @@ export class FooterComponent implements OnInit {
       const mensagem =  res.ok ? 'Sua mensagem foi enviada!' : 'Sua mensagem não foi enviada, por favor, tente novamente.';
       const type = res.ok ? 'Success' : 'Danger';
       this.notificationService.showNotification(type, mensagem);
+      res.ok && this.contactForm.reset();
     })
   }
 

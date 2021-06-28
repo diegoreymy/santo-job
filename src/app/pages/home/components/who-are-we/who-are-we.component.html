@@ -35,7 +35,7 @@
 
 
 <ng-container *ngIf="view === 'page-1'">
-    <div class="container container-who-are-we">
+    <div class="container container-who-are-we page-1">
         <h2 class="main-title">Quem somos</h2>
         <div class="main-content-section">
             <div class="joao-neto-image">
@@ -53,6 +53,7 @@
                     unchanged.</p>
             </div>
         </div>
+        <button class="see-more-btn" (click)="goToPage(carouselItemMenu[0].mobile_position + 1)">ver mais</button>
     </div>
 </ng-container>
 
