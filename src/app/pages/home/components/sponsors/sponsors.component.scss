@@ -1,7 +1,47 @@
 @import "/src/app/shared/styles/variables";
+@import "~swiper/swiper";
+@import "~swiper/components/pagination/pagination";
+
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 :host {
   background-color: white;
+  height: calc(100vh - 80px);
+  @media (min-width: $lg) {
+    height: auto;
+  }
 }
 
 .sponsors-container {
@@ -10,6 +50,8 @@
   gap: 2rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  height: 100%;
+  justify-content: space-between;
 
   @media (min-width: $lg) {
     padding-top: 1rem;
@@ -34,9 +76,10 @@
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 2rem;
+    height: 75%;
 
     .sponsors-item {
-      width: 25%;
+      width: 100%;
 
       @media (min-width: $md) {
         width: 80px;

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper/core";
+import { SwiperComponent } from "swiper/angular";
+
+SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 @Component({
   selector: '[app-sponsors]',

@@ -1,10 +1,33 @@
 <div class="container sponsors-container">
-    <h2 class="sponsors-title">Parceiros</h2>
-    <div class="sponsors-list">
-        <img class="sponsors-item" src="/assets/images/partner-01.png" alt="Mac Donald">
-        <img class="sponsors-item" src="/assets/images/partner-02.png" alt="Oi">
-        <img class="sponsors-item" src="/assets/images/partner-03.png" alt="Ambev">
-        <img class="sponsors-item" src="/assets/images/partner-04.png" alt="Brahma">
-        <img class="sponsors-item" src="/assets/images/partner-05.png" alt="Budweiser">
-    </div>
+  <h2 class="sponsors-title">Parceiros</h2>
+  <div class="sponsors-list">
+    <swiper [slidesPerView]="1" [spaceBetween]="10" [centeredSlides]="true" [autoplay]="{
+      delay: 2500,
+      disableOnInteraction: false
+    }" [pagination]="{
+      clickable: true
+    }" [breakpoints]="{
+      '640': {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      '768': {
+        slidesPerView: 4,
+        spaceBetween: 40
+      },
+      '1024': {
+        slidesPerView: 5,
+        spaceBetween: 50
+      }
+    }" class="sponsors-carousel">
+      <ng-template swiperSlide><img class="sponsors-item" src="/assets/images/partner-01.png" alt="Mac Donald">
+      </ng-template>
+      <ng-template swiperSlide><img class="sponsors-item" src="/assets/images/partner-02.png" alt="Oi"></ng-template>
+      <ng-template swiperSlide><img class="sponsors-item" src="/assets/images/partner-03.png" alt="Ambev"></ng-template>
+      <ng-template swiperSlide><img class="sponsors-item" src="/assets/images/partner-04.png" alt="Brahma">
+      </ng-template>
+      <ng-template swiperSlide><img class="sponsors-item" src="/assets/images/partner-05.png" alt="Budweiser">
+      </ng-template>
+    </swiper>
+  </div>
 </div>
