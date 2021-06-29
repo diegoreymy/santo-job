@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: '[app-curiosity]',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./curiosity.component.scss']
 })
 export class CuriosityComponent implements OnInit {
+
+  @Input() view: string = 'default';
 
   constructor() { }
 

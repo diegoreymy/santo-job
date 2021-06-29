@@ -8,7 +8,7 @@ import { CAROUSEL_ITEMS_MENU, ICarouselItemsInfo } from '../../constants/carouse
 })
 export class HeaderComponent implements OnInit {
 
-  @Input() activeMenu = 3;
+  @Input() activeMenu = 0;
   @Output() onItemMenuSelected = new EventEmitter<number>();
 
   open = false;

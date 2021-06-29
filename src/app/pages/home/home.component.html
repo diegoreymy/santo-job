@@ -40,9 +40,19 @@
   <ng-template swiperSlide>
     <section app-influencers (onClickBtn)="onSelectedSlide($event)"></section>
   </ng-template>
-  <ng-template swiperSlide>
-    <section app-curiosity></section>
-  </ng-template>
+  <ng-container *ngIf="!isMobile">
+    <ng-template swiperSlide>
+      <section app-curiosity></section>
+    </ng-template>
+  </ng-container>
+  <ng-container *ngIf="isMobile">
+    <ng-template swiperSlide>
+      <section app-curiosity view='page-1'></section>
+    </ng-template>
+    <ng-template swiperSlide>
+      <section app-sponsors></section>
+    </ng-template>
+  </ng-container>
   <ng-container *ngIf="!isMobile && !isTablet">
     <ng-template swiperSlide>
       <footer app-footer></footer>
