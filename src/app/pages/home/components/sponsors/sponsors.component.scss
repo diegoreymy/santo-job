@@ -12,6 +12,7 @@
   text-align: center;
   font-size: 18px;
   background: #fff;
+  display: flex;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -79,10 +80,16 @@
     height: 75%;
 
     .sponsors-item {
-      width: 100%;
+      width: auto;
+      height: 65%;
+      margin: 0 auto;
 
       @media (min-width: $md) {
         width: 80px;
+      }
+
+      @media (min-width: $lg) {
+        height: 100%;
       }
     }
   }

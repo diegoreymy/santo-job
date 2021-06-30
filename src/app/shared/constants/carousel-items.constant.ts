@@ -27,7 +27,7 @@ export const CAROUSEL_ITEMS_MENU: ICarouselItemsInfo[] = [
   {
     section_name: 'Fale conosco',
     fragment: 'fale-conosco',
-    mobile_position: 9,
+    mobile_position: 10,
     desktop_position: 7
   },
 ]
