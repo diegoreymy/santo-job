@@ -6,6 +6,7 @@ import { ServicesComponent } from './services.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { CardsCarouselComponent } from './components/cards-carousel/cards-carousel.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SwiperModule } from 'swiper/angular';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CommonModule,
     ServicesRoutingModule,
     SharedModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    SwiperModule,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

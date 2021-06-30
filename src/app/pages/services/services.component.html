@@ -32,7 +32,7 @@
           <button class="services-content-button mx-auto lg:ml-0 w-4/5 lg:w-1/2 invisible lg:visible" (click)="goToFooter()">Solicitar orçamento</button>
         </div>
         <div class='card-section lg:w-2/5 flex flex-col gap-8 lg:gap-0'>
-          <section app-cards-carousel></section>
+          <section app-cards-carousel [imagesList]="serviceItem.imagesList"></section>
           <button class="services-content-button mx-auto lg:ml-0 w-4/5 lg:w-1/2 lg:hidden" (click)="goToFooter()">Solicitar orçamento</button>
         </div>
       </div>
