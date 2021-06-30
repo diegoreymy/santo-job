@@ -13,6 +13,7 @@ import { SponsorsComponent } from './components/sponsors/sponsors.component';
 import { WhatDoWeDoComponent } from './components/what-do-we-do/what-do-we-do.component';
 import { CuriosityComponent } from './components/curiosity/curiosity.component';
 import { InfluencersComponent } from './components/influencers/influencers.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { InfluencersComponent } from './components/influencers/influencers.compo
     CommonModule,
     HomeRoutingModule,
     SwiperModule,
+    FontAwesomeModule,
     SharedModule
   ],
   schemas: [

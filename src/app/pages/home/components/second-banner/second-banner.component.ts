@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: '[app-second-banner]',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecondBannerComponent implements OnInit {
 
+  @Output() onClickArrow = new EventEmitter<number>();
+
+  icons = {
+    chevronDown: faChevronDown
+  };
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  goToNextSlide(nextSlide: number) {
+    this.onClickArrow.emit(nextSlide);
   }
 
 }

@@ -2,20 +2,25 @@
 <swiper [direction]="'vertical'" [slidesPerView]="1" [spaceBetween]="30" [mousewheel]="true" [pagination]="{
       clickable: true
     }" class="mySwiper" (slideChange)="onSlideChange($event)" (swiper)="onSwiper($event)" >
+
   <ng-template swiperSlide>
-    <section app-first-banner></section>
+    <section app-first-banner (onClickArrow)="onSelectedSlide($event)"></section>
   </ng-template>
+
   <ng-template swiperSlide>
-    <section app-second-banner></section>
+    <section app-second-banner (onClickArrow)="onSelectedSlide($event)"></section>
   </ng-template>
+
   <ng-template swiperSlide>
-    <section app-third-banner></section>
+    <section app-third-banner (onClickArrow)="onSelectedSlide($event)"></section>
   </ng-template>
+
   <ng-container *ngIf="!isMobile">
     <ng-template swiperSlide>
       <section app-who-are-we></section>
     </ng-template>
   </ng-container>
+
   <ng-container *ngIf="isMobile">
     <ng-template swiperSlide>
       <section app-who-are-we view='page-1' (onClickSeeMore)="onSelectedSlide($event)"></section>
@@ -24,11 +29,13 @@
       <section app-who-are-we view='page-2'></section>
     </ng-template>
   </ng-container>
+
   <ng-container *ngIf="!isMobile">
     <ng-template swiperSlide>
       <section app-what-do-we-do></section>
     </ng-template>
   </ng-container>
+
   <ng-container *ngIf="isMobile">
     <ng-template swiperSlide>
       <section app-what-do-we-do view='page-1' (onClickSeeMore)="onSelectedSlide($event)"></section>
@@ -37,14 +44,17 @@
       <section app-what-do-we-do view='page-2'></section>
     </ng-template>
   </ng-container>
+
   <ng-template swiperSlide>
     <section app-influencers (onClickBtn)="onSelectedSlide($event)"></section>
   </ng-template>
+
   <ng-container *ngIf="!isMobile">
     <ng-template swiperSlide>
       <section app-curiosity></section>
     </ng-template>
   </ng-container>
+
   <ng-container *ngIf="isMobile">
     <ng-template swiperSlide>
       <section app-curiosity view='page-1'></section>
@@ -53,11 +63,13 @@
       <section app-sponsors></section>
     </ng-template>
   </ng-container>
+
   <ng-container *ngIf="!isMobile && !isTablet">
     <ng-template swiperSlide>
       <footer app-footer></footer>
     </ng-template>
   </ng-container>
+
   <ng-container *ngIf="isMobile || isTablet">
     <ng-template swiperSlide>
       <footer app-footer view='page-1'></footer>
@@ -66,4 +78,5 @@
       <footer app-footer view='page-2'></footer>
     </ng-template>
   </ng-container>
+
 </swiper>

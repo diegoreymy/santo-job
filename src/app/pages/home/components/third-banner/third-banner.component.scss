@@ -12,7 +12,7 @@
     flex-direction: column;
     width: 100%;
     height: 100vh;
-  
+
     .bg {
       width: 100%;
       height: 100vh;
@@ -23,33 +23,33 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-  
+
       .title-section {
         display: flex;
         flex-direction: column;
         padding-left: 4rem;
         position: relative;
-  
+
         .symbol {
           font-family: 'Maybe Maybe Not';
           font-size: 2rem;
           position: absolute;
           top: -32px;
           left: 90px;
-  
+
           @media (min-width: $md) {
             font-size: 3rem;
             top: -45px;
             left: 105px;
           }
-  
+
           @media (min-width: $lg) {
             font-size: 4rem;
             position: absolute;
             top: -64px;
             left: 115px;
           }
-  
+
           @media (min-width: $xl) {
             font-size: 84px;
             position: absolute;
@@ -57,86 +57,86 @@
             left: 130px;
           }
         }
-  
+
         .title-one {
           font-family: 'Maybe Maybe Not';
           font-size: 2rem;
           position: relative;
           width: 50%;
-  
+
           @media (min-width: $md) {
             font-size: 3rem;
           }
-  
+
           @media (min-width: $lg) {
             font-size: 4rem;
             width: 50%;
           }
-  
+
           .images-group {
             width: 45px;
             position: absolute;
             top: -20px;
             left: 65px;
-  
+
             @media (min-width: $md) {
               left: 100px;
             }
-  
+
             @media (min-width: $lg) {
               width: 200px;
               top: -36px;
               left: 160px
             }
-  
+
             @media (min-width: $xl) {
               width: 200px;
               top: -85px;
               left: 180px;
             }
-  
+
             .title-image {
               width: 171px;
               z-index: 1;
               position: absolute;
               top: -10px;
               left: -5px;
-  
+
               @media (min-width: $lg) {
                 width: 96px;
                 top: -25px;
                 left: -35px;
               }
-  
+
               @media (min-width: $xl) {
                 width: 171px;
                 left: -35px;
               }
-  
+
               &:last-child {
                 top: -10px;
                 left: -5px;
                 z-index: 0;
-  
+
                 @media (min-width: $lg) {
                   top: -25px;
                   left: -35px;
                   z-index: 0;
                 }
-  
+
               }
             }
           }
         }
       }
-  
+
       .logo-img {
         width: 30%;
         height: auto;
         position: absolute;
         top: 2.5rem;
         right: 35%;
-  
+
         @media (min-width: $lg) {
           width: 20%;
           height: auto;
@@ -145,19 +145,36 @@
           right: 2.5rem;
         }
       }
-  
+
       .subtitle-box {
         width: auto;
         color: white;
         font-size: 1.25rem;
-  
+
         @media (min-width: $md) {
           font-size: 2.5rem;
         }
-  
+
         @media (min-width: $lg) {
           font-size: 3rem;
         }
       }
     }
+  }
+
+  @keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 10px;
+    }
+  }
+
+  .arrow-down {
+    animation: MoveUpDown 1s linear infinite;
+    position: absolute;
+    bottom: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
   }
