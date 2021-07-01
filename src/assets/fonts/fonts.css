@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Futura Book';
-  src: url('Futura-Bold.eot');
-  src: url('Futura-Bold.eot?#iefix') format('embedded-opentype'),
-    url('Futura-Bold.woff2') format('woff2'),
-    url('Futura-Bold.woff') format('woff'),
-    url('Futura-Bold.ttf') format('truetype'),
-    url('Futura-Bold.svg#Futura-Bold') format('svg');
+  src: url('/assets/fonts/Futura-Bold.eot');
+  src: url('/assets/fonts/Futura-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/Futura-Bold.woff2') format('woff2'),
+    url('/assets/fonts/Futura-Bold.woff') format('woff'),
+    url('/assets/fonts/Futura-Bold.ttf') format('truetype'),
+    url('/assets/fonts/Futura-Bold.svg#Futura-Bold') format('svg');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
