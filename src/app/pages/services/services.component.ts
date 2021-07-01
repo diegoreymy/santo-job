@@ -1,14 +1,22 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { IServiceList, SERVICES_LIST } from 'src/app/shared/constants/services-list.constant';
+import { SwiperComponent } from "swiper/angular";
+
+// import Swiper core and required modules
+import SwiperCore, { Pagination, Navigation } from "swiper/core";
+
+// install Swiper modules
+SwiperCore.use([Pagination, Navigation]);
 
 
 @Component({
   selector: 'app-services',
   templateUrl: './services.component.html',
-  styleUrls: ['./services.component.scss']
+  styleUrls: ['./services.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ServicesComponent implements OnInit {
 

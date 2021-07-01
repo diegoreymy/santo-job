@@ -1,25 +1,46 @@
 @import "/src/app/shared/styles/variables";
+@import "~swiper/swiper";
+@import "~swiper/components/pagination/pagination";
+@import "~swiper/components/navigation/navigation";
 
 main {
   height: auto;
+
   @media (min-width: $lg) {
     height: calc(100vh - 120px);
   }
 }
 
-footer{
-  height: auto;
+footer {
+  height: auto !important;
+
   @media (min-width: $lg) {
     height: calc(100vh - 120px);
   }
+}
+
+.back-icon {
+  display: flex;
+  position: absolute;
+  top: 100px;
+  left: 1rem;
+  justify-content: flex-start;
+  background: none;
+  color: #0091DA;
+  padding: 0.125rem 1rem;
+  font-size: 24px;
+  align-self: self-end;
+  z-index: 8;
 }
 
 .container-services {
   display: flex;
   flex-direction: column;
+
   .services-header {
     display: flex;
     height: 25%;
+
     .back-btn {
       background: #0091DA 0% 0% no-repeat padding-box;
       border-radius: 24px;
@@ -28,35 +49,31 @@ footer{
       padding: 0.125rem 2rem;
       font-size: 12px;
       align-self: self-end;
+
       @media (min-width: $lg) {
         padding: 0.5rem 3rem;
         align-self: center;
         font-size: 1rem;
       }
     }
-    .back-icon {
-      display: flex;
-      justify-content: flex-start;
-      background: none;
-      color: #0091DA;
-      padding: 0.125rem 1rem;
-      font-size: 24px;
-      align-self: self-end;
-    }
   }
+
   .services-content {
     padding: 2rem 0;
-    background: linear-gradient(180deg,#80CFD8 calc(100% - 248px),#fff calc(100% - 248px));
+    background: linear-gradient(180deg, #80CFD8 calc(100% - 248px), #fff calc(100% - 248px));
     position: relative;
     height: 75%;
+
     @media (min-width: $lg) {
       background: transparent radial-gradient(closest-side at 47% 60%, #80CFD8 0%, #67B9CD 100%) 0% 0% no-repeat padding-box;
     }
+
     .services-content-text {
       color: white;
       margin-left: 0;
       line-height: 35px;
     }
+
     .services-content-button {
       background: #0091DA 0% 0% no-repeat padding-box;
       border-radius: 33px;
@@ -70,6 +87,7 @@ footer{
     margin-top: -5rem;
     width: 280px;
     align-self: center;
+
     @media (min-width: $lg) {
       width: 300px;
       align-self: auto;
@@ -79,3 +97,23 @@ footer{
 }
 
 
+.services-horizontal-carousel {
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    @media (max-width: $sm) {
+      top: 10%;
+    }
+    @media (min-width: $lg) {
+      color: white;
+    }
+  }
+
+  .swiper-pagination.swiper-pagination-fraction {
+    @media (max-width: $sm) {
+      bottom: unset;
+      top: 30px;
+      z-index: 0;
+    }
+  }
+}

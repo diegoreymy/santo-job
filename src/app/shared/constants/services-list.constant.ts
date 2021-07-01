@@ -1,141 +1,255 @@
+interface IDataServicePage {
+  subtitle: string;
+  logo: string;
+  imagesList: string[];
+  mainText: string;
+}
+
 export interface IServiceList {
-    name: string;
-    link: string;
-    img: string;
-    imagesList: string[];
+  name: string;
+  icon: string;
+  link: string;
+  dataServicePage: IDataServicePage[];
 }
 
 export const SERVICES_LIST: IServiceList[] = [
-    {
-        name: 'Publicidade',
-        link: '/servicos/publicidade',
-        img: '/assets/images/icons/icon-publicidade.png',
+  {
+    name: 'Publicidade',
+    icon: '/assets/images/icons/icon-publicidade.png',
+    link: '/servicos/publicidade',
+    dataServicePage: [
+      {
+        subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais 1',
+        logo: '/assets/images/icons/logo-oi.png',
         imagesList: [
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
-        ]
-    },
-    {
-        name: 'Incentivo',
-        link: '/servicos/incentivo',
-        img: '/assets/images/icons/icon-incentivo.png',
+        ],
+        mainText: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo conse',
+      },
+      {
+        subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais 2',
+        logo: '/assets/images/icons/logo-oi.png',
         imagesList: [
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
-        ]
-    },
-    {
-        name: 'Planejamento estratégico',
-        link: '/servicos/planejamento-estrategico',
-        img: '/assets/images/icons/icon-planejamento.png',
+        ],
+        mainText: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo conse',
+      },
+      {
+        subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais 3',
+        logo: '/assets/images/icons/logo-oi.png',
         imagesList: [
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
-        ]
-    },
-    {
-        name: 'Trade Marketing',
-        link: '/servicos/trade-marketing',
-        img: '/assets/images/icons/icon-trade.png',
+        ],
+        mainText: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo conse',
+      }
+    ]
+
+  },
+  {
+    name: 'Incentivo',
+    icon: '/assets/images/icons/icon-incentivo.png',
+    link: '/servicos/incentivo',
+    dataServicePage: [
+      {
+        subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',
+        logo: '/assets/images/icons/logo-oi.png',
         imagesList: [
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
-        ]
-    },
-    {
-        name: 'Influencer',
-        link: '/servicos/influencer',
-        img: '/assets/images/icons/icon-influencer.png',
+        ],
+        mainText: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo conse',
+      }
+    ]
+  },
+  {
+    name: 'Planejamento estratégico',
+    icon: '/assets/images/icons/icon-planejamento.png',
+    link: '/servicos/planejamento-estrategico',
+    dataServicePage: [
+      {
+        subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',
+        logo: '/assets/images/icons/logo-oi.png',
         imagesList: [
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
-        ]
-    },
-    {
-        name: 'Logos e selos',
-        link: '/servicos/logos-e-selos',
-        img: '/assets/images/icons/icon-logos-selos.png',
+        ],
+        mainText: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo conse',
+      }
+    ]
+  },
+  {
+    name: 'Trade Marketing',
+    icon: '/assets/images/icons/icon-trade.png',
+    link: '/servicos/trade-marketing',
+    dataServicePage: [
+      {
+        subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',
+        logo: '/assets/images/icons/logo-oi.png',
         imagesList: [
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
-        ]
-    },
-    {
-        name: 'Promoção',
-        link: '/servicos/promocao',
-        img: '/assets/images/icons/icon-promotion.png',
+        ],
+        mainText: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo conse',
+      }
+    ]
+  },
+  {
+    name: 'Influencer',
+    icon: '/assets/images/icons/icon-influencer.png',
+    link: '/servicos/influencer',
+    dataServicePage: [
+      {
+        subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',
+        logo: '/assets/images/icons/logo-oi.png',
         imagesList: [
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
-        ]
-    },
-    {
-        name: 'Publi Digital',
-        link: '/servicos/publi-digital',
-        img: '/assets/images/icons/icon-publi-digital.png',
+        ],
+        mainText: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo conse',
+      }
+    ]
+  },
+  {
+    name: 'Logos e selos',
+    icon: '/assets/images/icons/icon-logos-selos.png',
+    link: '/servicos/logos-e-selos',
+    dataServicePage: [
+      {
+        subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',
+        logo: '/assets/images/icons/logo-oi.png',
         imagesList: [
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
-        ]
-    },
-    {
-        name: 'Projetos proprietários',
-        link: '/servicos/projetos-proprietarios',
-        img: '/assets/images/icons/icon-project.png',
+        ],
+        mainText: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo conse',
+      }
+    ]
+  },
+  {
+    name: 'Promoção',
+    icon: '/assets/images/icons/icon-promotion.png',
+    link: '/servicos/promocao',
+    dataServicePage: [
+      {
+        subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',
+        logo: '/assets/images/icons/logo-oi.png',
         imagesList: [
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
-        ]
-    },
-    {
-        name: 'Eventos',
-        link: '/servicos/eventos',
-        img: '/assets/images/icons/icon-event.png',
+        ],
+        mainText: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo conse',
+      }
+    ]
+  },
+  {
+    name: 'Publi Digital',
+    icon: '/assets/images/icons/icon-publi-digital.png',
+    link: '/servicos/publi-digital',
+    dataServicePage: [
+      {
+        subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',
+        logo: '/assets/images/icons/logo-oi.png',
         imagesList: [
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
-        ]
-    },
-    {
-        name: 'Endomarketing',
-        link: '/servicos/endomarketing',
-        img: '/assets/images/icons/icon-endomarketing.png',
+        ],
+        mainText: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo conse',
+      }
+    ]
+  },
+  {
+    name: 'Projetos proprietários',
+    icon: '/assets/images/icons/icon-project.png',
+    link: '/servicos/projetos-proprietarios',
+    dataServicePage: [
+      {
+        subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',
+        logo: '/assets/images/icons/logo-oi.png',
         imagesList: [
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
-        ]
-    },
-    {
-        name: 'Assessoria de imprensa',
-        link: '/servicos/assessoria-de-imprensa',
-        img: '/assets/images/icons/icon-press.png',
+        ],
+        mainText: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo conse',
+      }
+    ]
+  },
+  {
+    name: 'Eventos',
+    icon: '/assets/images/icons/icon-event.png',
+    link: '/servicos/eventos',
+    dataServicePage: [
+      {
+        subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',
+        logo: '/assets/images/icons/logo-oi.png',
         imagesList: [
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
           '/assets/images/tirulipa.png',
-        ]
-    }
+        ],
+        mainText: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo conse',
+      }
+    ]
+  },
+  {
+    name: 'Endomarketing',
+    icon: '/assets/images/icons/icon-endomarketing.png',
+    link: '/servicos/endomarketing',
+    dataServicePage: [
+      {
+        subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',
+        logo: '/assets/images/icons/logo-oi.png',
+        imagesList: [
+          '/assets/images/tirulipa.png',
+          '/assets/images/tirulipa.png',
+          '/assets/images/tirulipa.png',
+          '/assets/images/tirulipa.png',
+        ],
+        mainText: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo conse',
+      }
+    ]
+  },
+  {
+    name: 'Assessoria de imprensa',
+    icon: '/assets/images/icons/icon-press.png',
+    link: '/servicos/assessoria-de-imprensa',
+    dataServicePage: [
+      {
+        subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',
+        logo: '/assets/images/icons/logo-oi.png',
+        imagesList: [
+          '/assets/images/tirulipa.png',
+          '/assets/images/tirulipa.png',
+          '/assets/images/tirulipa.png',
+          '/assets/images/tirulipa.png',
+        ],
+        mainText: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo conse',
+      }
+    ]
+  }
 ]
