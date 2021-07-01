@@ -13,7 +13,7 @@
             <div
               class="flex lg:px-8 lg:mx-auto flex-col-reverse lg:flex-row lg:h-full justify-between items-center gap-6 lg:gap-0">
               <div class="flex flex-col lg:flex-row lg:h-full items-center">
-                <img [attr.src]="item.logo" alt="Logo da Oi" class="w-3/4 lg:w-auto lg:h-full py-4">
+                <img loading="lazy" [attr.src]="item.logo" alt="Logo da Oi" class="w-3/4 lg:w-auto lg:h-full py-4">
                 <div class="services-header-title flex flex-col text-center lg:text-left">
                   <h1 class="futura-book-bold text-xl lg:text-3xl">{{serviceItem?.name}}</h1>
                   <h2 class="futura-book-bt text-lg lg:text-xl">{{item.subtitle}}</h2>
