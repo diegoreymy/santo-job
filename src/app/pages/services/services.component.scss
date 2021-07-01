@@ -104,13 +104,16 @@ footer {
     @media (max-width: $sm) {
       top: 10%;
     }
+    @media (max-width: $lg) {
+      top: 15%;
+    }
     @media (min-width: $lg) {
       color: white;
     }
   }
 
   .swiper-pagination.swiper-pagination-fraction {
-    @media (max-width: $sm) {
+    @media (max-width: $lg) {
       bottom: unset;
       top: 30px;
       z-index: 0;
