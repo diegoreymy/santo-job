@@ -9,6 +9,7 @@ export interface IServiceList {
   name: string;
   icon: string;
   link: string;
+  layout: number;
   dataServicePage: IDataServicePage[];
 }
 
@@ -17,6 +18,7 @@ export const SERVICES_LIST: IServiceList[] = [
     name: 'Publicidade',
     icon: '/assets/images/icons/icon-publicidade.png',
     link: '/servicos/publicidade',
+    layout: 1,
     dataServicePage: [
       {
         subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais 1',
@@ -58,6 +60,7 @@ export const SERVICES_LIST: IServiceList[] = [
     name: 'Incentivo',
     icon: '/assets/images/icons/icon-incentivo.png',
     link: '/servicos/incentivo',
+    layout: 2,
     dataServicePage: [
       {
         subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',
@@ -76,6 +79,7 @@ export const SERVICES_LIST: IServiceList[] = [
     name: 'Planejamento estratégico',
     icon: '/assets/images/icons/icon-planejamento.png',
     link: '/servicos/planejamento-estrategico',
+    layout: 3,
     dataServicePage: [
       {
         subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',
@@ -94,6 +98,7 @@ export const SERVICES_LIST: IServiceList[] = [
     name: 'Trade Marketing',
     icon: '/assets/images/icons/icon-trade.png',
     link: '/servicos/trade-marketing',
+    layout: 1,
     dataServicePage: [
       {
         subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',
@@ -112,6 +117,7 @@ export const SERVICES_LIST: IServiceList[] = [
     name: 'Influencer',
     icon: '/assets/images/icons/icon-influencer.png',
     link: '/servicos/influencer',
+    layout: 2,
     dataServicePage: [
       {
         subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',
@@ -130,6 +136,7 @@ export const SERVICES_LIST: IServiceList[] = [
     name: 'Logos e selos',
     icon: '/assets/images/icons/icon-logos-selos.png',
     link: '/servicos/logos-e-selos',
+    layout: 3,
     dataServicePage: [
       {
         subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',
@@ -148,6 +155,7 @@ export const SERVICES_LIST: IServiceList[] = [
     name: 'Promoção',
     icon: '/assets/images/icons/icon-promotion.png',
     link: '/servicos/promocao',
+    layout: 1,
     dataServicePage: [
       {
         subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',
@@ -166,6 +174,7 @@ export const SERVICES_LIST: IServiceList[] = [
     name: 'Publi Digital',
     icon: '/assets/images/icons/icon-publi-digital.png',
     link: '/servicos/publi-digital',
+    layout: 2,
     dataServicePage: [
       {
         subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',
@@ -184,6 +193,7 @@ export const SERVICES_LIST: IServiceList[] = [
     name: 'Projetos proprietários',
     icon: '/assets/images/icons/icon-project.png',
     link: '/servicos/projetos-proprietarios',
+    layout: 3,
     dataServicePage: [
       {
         subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',
@@ -202,6 +212,7 @@ export const SERVICES_LIST: IServiceList[] = [
     name: 'Eventos',
     icon: '/assets/images/icons/icon-event.png',
     link: '/servicos/eventos',
+    layout: 1,
     dataServicePage: [
       {
         subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',
@@ -220,6 +231,7 @@ export const SERVICES_LIST: IServiceList[] = [
     name: 'Endomarketing',
     icon: '/assets/images/icons/icon-endomarketing.png',
     link: '/servicos/endomarketing',
+    layout: 2,
     dataServicePage: [
       {
         subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',
@@ -238,6 +250,7 @@ export const SERVICES_LIST: IServiceList[] = [
     name: 'Assessoria de imprensa',
     icon: '/assets/images/icons/icon-press.png',
     link: '/servicos/assessoria-de-imprensa',
+    layout: 3,
     dataServicePage: [
       {
         subtitle: 'Exagero de Giga Tasty por Tirullipa em suas redes sociais',

@@ -80,6 +80,13 @@ footer.footer-service {
       color: white;
       padding: 0.5rem 0;
       font-family: 'Futura Book';
+
+      &.layout-2,
+      &.layout-3 {
+        @media (min-width: $lg) {
+          margin: 0 auto;
+        }
+      }
     }
   }
 
@@ -87,6 +94,19 @@ footer.footer-service {
     margin-top: -5rem;
     width: 280px;
     align-self: center;
+
+    @media (min-width: $lg) {
+
+      &.layout-2,
+      &.layout-3 {
+        margin-top: 0;
+        justify-content: center;
+      }
+
+      &.layout-3 {
+        width: 40%;
+      }
+    }
 
     @media (min-width: $lg) {
       width: 300px;
@@ -104,9 +124,11 @@ footer.footer-service {
     @media (max-width: $sm) {
       top: 10%;
     }
+
     @media (min-width: $md) and (max-width: $lg) {
       top: 15%;
     }
+
     @media (min-width: $lg) {
       color: white;
     }

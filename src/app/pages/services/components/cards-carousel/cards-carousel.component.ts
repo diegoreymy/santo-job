@@ -12,6 +12,7 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
 export class CardsCarouselComponent implements OnInit {
 
   @Input() imagesList: string[] = []
+  @Input() layout: number = 1;
 
   constructor() { }
 
