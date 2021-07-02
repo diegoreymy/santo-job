@@ -24,6 +24,7 @@ export class ServicesComponent implements OnInit {
   serviceItem: IServiceList = {} as IServiceList;
 
   isMobile = window.innerWidth < 768;
+  isTablet = window.innerWidth < 1024 && window.innerWidth >= 768;
 
   icons = {
     arrowLeft: faArrowLeft
